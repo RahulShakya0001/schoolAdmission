@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: url(../assets/img/bg.jpg) no-repeat;
+    --bg-size: cover;
+    --bg-position: center;
+    --border-color: rgba(255, 255, 255, .2);
+    --border-radius: 40px;
+    --font-color: #fff;
+    --button-bg-color: #fff;
+    --input-bg-color: transparent;
+    --input-font-size: 16px;
+    --wrapper-bg: transparent;
+    --wrapper-padding: 30px 40px;
+    --blur-effect: blur(9px);
+    --shadow-effect: 0 0 10px rgba(0, 0, 0, .1);
+    --accent-color: #31cab8;
+    --click-button-height: 45px;
+    --wrapper-width: 420px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+    background-size: var(--bg-size);
+    background-position: var(--bg-position);
+}
+
+.wrapper {
+    width: var(--wrapper-width);
+    background: var(--wrapper-bg);
+    border: 2px solid var(--border-color);
+    backdrop-filter: var(--blur-effect);
+    color: var(--font-color);
+    border-radius: 12px;
+    padding: var(--wrapper-padding);
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: var(--input-bg-color);
+    border: none;
+    outline: none;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--input-font-size);
+    color: var(--font-color);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: var(--font-color);
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: var(--accent-color);
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .click-button {
+    width: 100%;
+    height: var(--click-button-height);
+    background: var(--button-bg-color);
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-effect);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}

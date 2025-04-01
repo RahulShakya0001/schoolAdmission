@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --table-bg-color: rgb(207, 229, 248);
+  --header-bg-color: #f2f2f2;
+  --font-color: black;
+  --input-border-color: black;
+  --button-padding: 10px;
+  --input-width: 500px;
+  --input-height: 40px;
+  --font-size-large: 25px;
+}
+
+.box3 .heading {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: var(--table-bg-color);
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid var(--font-color);
+}
+
+th {
+  background-color: var(--header-bg-color);
+  width: 40%;
+}
+
+.label_subject_name {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+}
+
+input {
+  margin: 5px;
+  width: var(--input-width);
+  height: var(--input-height);
+  outline: none;
+  padding-left: 8px;
+  border: 1px solid var(--input-border-color);
+}
+
+.add-subject {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: var(--button-padding);
+}
+
+.data_subject_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.subject_list_heading {
+  text-align: center;
+}
+
+.addSubjectBtn {
+  display: block;
+  margin: 1rem auto;
+}
+
+.subject_list {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.add_subject_list_tbody tr td:nth-child(3) {
+  width: 200px;
+}
+
+/* Hover input change */
+.save_change_class {
+  width: 100%;
+  border: none;
+  font-size: var(--font-size-large);
+  height: 20px;
+}

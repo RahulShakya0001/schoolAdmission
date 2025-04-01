@@ -1,0 +1,81 @@
+.student-attendance {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.box3 hr {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(91, 91, 91);
+    margin-bottom: 1rem;
+}
+
+.student-attendance-para-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box-2px {
+    width: 22rem;
+    height: 3rem;
+    border: 1px solid black;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.incharge-class span{
+    font-size: 1.2rem;
+}
+
+.btn button {
+    width: 8rem;
+    height: 3rem;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.attendance-date input {
+    width: inherit;
+    height: inherit;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+/* Class student list */
+table {
+    width: 83%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

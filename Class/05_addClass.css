@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --table-bg-color: rgb(207, 229, 248);
+  --header-bg-color: #f2f2f2;
+  --font-color: black;
+  --input-border-color: black;
+  --button-padding: 10px;
+  --input-width: 500px;
+  --input-height: 40px;
+  --font-size-large: 25px;
+}
+.back-button{
+
+  background-color: #8efff2;
+  text-decoration: none;
+  border: none;
+  /* margin-bottom: 2rem; */
+}
+
+.box3 .heading {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: var(--table-bg-color);
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid var(--font-color);
+}
+
+th {
+  background-color: var(--header-bg-color);
+}
+
+td {
+  width: 10%;
+}
+
+
+.add-class {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: var(--button-padding);
+}
+
+.data_class_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.add-class-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+
+}
+
+.add-class-section input {
+  margin: 5px;
+  width: 200px;
+  height: var(--input-height);
+  outline: none;
+  padding-left: 8px;
+  border: 1px solid var(--input-border-color);
+}
+
+
+.class_list_heading {
+  text-align: center;
+}
+
+.addClassBtn {
+  display: block;
+  margin: 1rem auto;
+}
+
+.class_list {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.add_class_list_tbody tr td:nth-child(3) {
+  width: 200px;
+}
+
+/* Hover input change */
+.save_change_class {
+  width: 100%;
+  border: none;
+  font-size: var(--font-size-large);
+  height: 20px;
+}
+
+/* ---------------2n-add-subject-form-------------- */
+.class-schedule{
+  margin-top: 1rem;
+}
+
+.subject-list-of-add-subject-copy{
+  width: 160px;
+  font-size: 15px;
+  background-color: #8efff2;
+  border: none;
+  margin-bottom: 2rem;
+}
+.subject-list-of-add-subject-copy:hover{
+  background-color: #71DCCF;
+
+}
+.second-add-subject-form {
+
+  border: 1px solid black;
+  width: 80%;
+  height: 100vh;
+  background-color: red;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 78rem;
+  height: 100vh;
+  margin: 1rem;
+  padding: 1rem;
+  background: var(--box-bg-color);
+  display: none;
+}
+
+.add-subject-main .add-subject-main-copy {
+  width: 100%;
+  height: 8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff5f3;
+}
+.add-subject-main-copy:hover{
+  background-color: #d8fffa;
+}
+.add-subject-main .add-subject-list-2-copy select{
+  width: 200px;
+  height: 40px;
+}
+.delete-button-of-add-subject{
+  width: 100px;
+}
+.add-subject-list-2-copy input{
+  width: 200px;
+  height: 40px;
+}
+
+.add-new-row-in-subject-detail{
+  margin-top: 2rem;
+  margin-left: 2rem;
+  background-color: #8efff2;
+  border: none;
+}
+.add-new-row-in-subject-detail:hover{
+  background-color: #71DCCF;
+
+}
+.submit-row-in-data-base{
+  margin-top: 2rem;
+  margin-left: 2rem;
+  background-color: #8efff2;
+  border: none;
+}
+.submit-row-in-data-base:hover{
+  background-color: #71DCCF;
+}
+.incharge-row-section{
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  min-height: 4rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+}
+
+.incharge-submit{
+  margin-left: 34rem;
+  margin-top: 4rem;
+}
+
+.incharge-row-section form input{
+  font-size: 1rem;
+}
+.incharge-value{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  border: 1px solid black;
+  padding-top: .2rem;
+}
+.incharge-value label{
+  margin-left: 1rem;
+}
+input[type=radio] {
+  border: 0px;
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem;
+}

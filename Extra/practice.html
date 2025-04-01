@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="manage-student-detail">
+        <div class="button-list">
+            <a class="btn btn-outline-dark" href="#">Info</a>
+            <a class="btn btn-outline-dark" href="#">Fees Details</a>
+            <a class="btn btn-outline-dark" href="#">Class Schedule</a>
+            <a class="btn btn-outline-dark" href="#">Identity Card</a>
+            <a style="margin-left: 49rem;" class="back-button btn btn-outline-success" href="#">Back</a>
+        </div>
+        <div class="main-container-off-fee-details">
+            <div class="class_details_page">
+                <div class="head_sec1 ">
+                    <h4>Student Fees Details</h4>
+                    <div class="student_fees_sec">
+                        <span class="reg_fees">Registration Fees : </span>
+                        <span class="addmission_fees">Admission Fees : </span>
+                        <span class="exam_fees">Exam Fees : </span>
+                        <span class="total_fees">Total Fees : </span>
+                    </div>
+                </div>
+                <div class="head_sec1">
+                    <h4>Pending Fees</h4>
+                    <div class="pending_fees">
+                        <span class="pend_reg">Registration Fees : </span>
+                        <span class="pend_add">Admission Fees : </span>
+                        <span class="pend_exam">Exam Fees : </span>
+                        <span class="pend_total">Total Fees : </span>
+                    </div>
+                </div>
+                <h2 class="pay-your-fees-heading">Pay Your Fees</h2>
+                <div class="pay-your-fees">
+                    <div class="pay-your-fees-section1">
+                        <div>
+                            <label for="fee-type">Select Fees Type</label><br>
+                            <select name="fee-type-select" id="fee-type">
+                                <option value="" selected disabled>Select</option>
+                                <option value="register">Registration Fees</option>
+                                <option value="admission">Admission Fees</option>
+                                <option value="exam">Exam Fees</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="pay-fee">Pay Fees</label><br>
+                            <input type="text" placeholder="Enter Fees">
+                        </div>
+                        <div>
+                            <label for="fee Date">Fee Date</label><br>
+                            <input type="date">
+                        </div>
+                        
+                    </div>
+                    <div class="pay-your-fees-section2">
+                        <label for="choose-one">Choose One Payment Method</label><br>
+                        <select name="pay_method">
+                            <option value="select" selected disabled>Select</option>
+                            <option value="cash">Cash</option>
+                            <option value="credit card & debit cards">Credit card & Debit cards</option>
+                            <option value="Google Pay">Google Pay</option>
+                            <option value="Phone Pay">Phone Pay</option>
+                            <option value="Cheques">Cheques</option>
+                        </select>
+                        <div>   
+                            <label for="remark">Remark</label><br>
+                            <input type="text" placeholder="Note: Who Pay the Fees">
+                        </div>
+                    </div>
+                </div>
+                <button class="submit-button-of-pay-your-fee">Submit</button>
+                <h3 class="fees-list-heading3">Fees List</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Sr No.</th>
+                            <th>Fees Type</th>
+                            <th>Total Fees </th>
+                            <th>Fees Fees</th>
+                            <th>Fees Entry Date</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <!-- <tr>
+                            <td>John Doe</td>
+                            <td>John Doe</td>
+                            <td>$100</td>
+                            <td>$200</td>
+                            <td>$50</td>
+                            <td>$350</td>
+                        </tr> -->
+                        
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- <script src="ex.js"></script> -->
+</body>
+
+</html>
+
+iv class="class_details_page">
+                <!-- Hidden input  -->
+                <input class="hidden_student_id" type="hidden">
+                <div class="head_sec1 ">
+                    <h4>Student Fees Details</h4>
+                    <div class="student_fees_sec">
+                        <span class="reg_fees">Registration Fees : </span>
+                        <span class="addmission_fees">Admission Fees : </span>
+                        <span class="exam_fees">Exam Fees : </span>
+                        <span class="total_fees">Total Fees : </span>
+                    </div>
+                </div>
+                <div class="head_sec1">
+                    <h4>Pending Fees</h4>
+                    <div class="pending_fees">
+                        <span class="pend_reg">Registration Fees : </span>
+                        <span class="pend_add">Admission Fees : </span>
+                        <span class="pend_exam">Exam Fees : </span>
+                        <span class="pend_total">Total Fees : </span>
+                    </div>
+                </div>
+                <h2 class="pay-your-fees-heading">Pay Your Fees</h2>
+                <!-- .............. -->
+                <div class="pay-your-fees">
+                    <div class="pay-your-fees-section1">
+                        <div>
+                            <label for="fee-type">Select Fees Type</label><br>
+                            <select name="fee-type-select" id="fee-type">
+                                <option value="" selected disabled>Select</option>
+                                <option value="registration_fees">Registration Fees</option>
+                                <option value="admission_fees">Admission Fees</option>
+                                <option value="exam_fees">Exam Fees</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="pay-fee">Pay Fees</label><br>
+                            <input class="pay-fee" type="text" placeholder="Enter Fees">
+                        </div>
+                        <div>
+                            <label for="fee Date">Fee Date</label><br>
+                            <input class="fee-date" type="date">
+                        </div>
+
+                    </div>
+                    <div class="pay-your-fees-section2">
+                        <label for="choose-one">Choose One Payment Method</label><br>
+                        <select name="pay_method">
+                            <option value="select" selected disabled>Select</option>
+                            <option value="cash">Cash</option>
+                            <option value="credit card & debit cards">Credit card & Debit cards</option>
+                            <option value="Google Pay">Google Pay</option>
+                            <option value="Phone Pay">Phone Pay</option>
+                            <option value="Cheques">Cheques</option>
+                        </select>
+                        <div>
+                            <label for="remark">Remark</label><br>
+                            <input class="remark" type="text" placeholder="Note: Who Pay the Fees">
+                        </div>
+                    </div>
+                </div>
+                <!-- ............ -->
+                <button class="submit-button-of-pay-your-fee">Submit</button>
+                <h3 class="fees-list-heading3">Fees List</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Sr No.</th>
+                            <th>Fees Type</th>
+                            <th>Total Fees </th>
+                            <th>Fees Date</th>
+                            <th>Fees Entry Date</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody class="data-table-tbody">
+                        <!-- ................Dynamic page......... -->
+
+                    </tbody>
+                </table>
+
+            </div>

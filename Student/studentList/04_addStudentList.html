@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../dashboard/02_dashboard.css">
+    <link rel="stylesheet" href="./04_addStudentList.css">
+    <title>Add Student List</title>
+</head>
+
+<body>
+    <div class="main addStudentList">
+        <div class="box1">
+            <div class="box1-logo">
+                <img src="../../assets/img/student_portal.png" alt="sdflsd">
+            </div>
+            <div class="left-box-inner">
+                <div class="dashboard text-box">
+                    <a href="../../dashboard/02_dashboard.html">Dashboard</a>
+                </div>
+                <div class="teacher text-box">
+                    <a href="../../Teacher/03_addTeacher.html">Teacher</a>
+                </div>
+                <div class="student text-box">
+                    <a href="../04_addStudent.html">Student</a>
+                </div>
+                <div class="add-class text-box">
+                    <a href="../../Class/05_addClass.html">Add Class</a>
+                </div>
+                <div class="add-subject text-box">
+                    <a href="../../Subject/06_addSubject.html">Add Subject</a>
+                </div>
+                <div class="log-out text-box">
+                    <a href="../../index.html">Log-out</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="box2"></div>
+            <div class="box3">
+                <div class="student-list-show">
+                    <table cellpadding="10" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Student Login User and Pass</th>
+                                <th>User Information</th>
+                                <th>Class and Section</th>
+                                <th>Edit and Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody class="add-student-list">
+                            <!-- Dynamic page  -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="manage-student-detail">
+
+        <div class="button-list">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active info_page" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">Info</button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link class_details" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">Fee Details</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link manage_sub_btn" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false">Class Schedule</button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link identity_card_btn" id="pills-identity-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-identity" type="button" role="tab" aria-controls="pills-identity"
+                        aria-selected="false">Identity Card</button>
+                </li>
+
+                <a style="margin-left: 4rem;" class="back-button btn btn-outline-success" href="#">Back</a>
+
+
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+
+
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                    <div class="info-page-design">
+                        <div class="info-page-border">
+                            <div class="info-page-img">
+                                <img src="../../assets/img/info-img.png" alt="">
+                            </div>
+                            <div class="info-page-text-data">
+                                <span class="info-page-name">Name : </span>
+                                <span class="info-page-class">Class : </span>
+                                <span class="info-page-fatherName">Father Name : </span>
+                                <span class="info-page-phoneNumber">Phone No : </span>
+                                <span class="info-page-address">Address : </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <!-- Class Details Page / fee Details -->
+                    <div class="class_details_page">
+                        <!-- Hidden input  -->
+                        <input class="hidden_student_id" type="hidden">
+                        <div class="head_sec1 ">
+                            <h4>Student Fees Details</h4>
+                            <div class="student_fees_sec">
+                                <span class="reg_fees">Registration Fees : </span>
+                                <span class="addmission_fees">Admission Fees : </span>
+                                <span class="exam_fees">Exam Fees : </span>
+                                <span class="total_fees">Total Fees : </span>
+                            </div>
+                        </div>
+                        <div class="head_sec1">
+                            <h4>Pending Fees</h4>
+                            <div class="pending_fees">
+                                <span class="pend_reg">Registration Fees : </span>
+                                <span class="pend_add">Admission Fees : </span>
+                                <span class="pend_exam">Exam Fees : </span>
+                                <span class="pend_total">Total Fees : </span>
+                            </div>
+                        </div>
+                        <h2 class="pay-your-fees-heading">Pay Your Fees</h2>
+                        <!-- .............. -->
+                        <div class="pay-your-fees">
+                            <div class="pay-your-fees-section1">
+                                <div>
+                                    <label for="fee-type">Select Fees Type</label><br>
+                                    <select name="fee-type-select" id="fee-type">
+                                        <option value="" selected disabled>Select</option>
+                                        <option value="registration_fees">Registration Fees</option>
+                                        <option value="admission_fees">Admission Fees</option>
+                                        <option value="exam_fees">Exam Fees</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="pay-fee">Pay Fees</label><br>
+                                    <input class="pay-fee" type="text" placeholder="Enter Fees">
+                                </div>
+                                <div>
+                                    <label for="fee Date">Fee Date</label><br>
+                                    <input class="fee-date" type="date">
+                                </div>
+
+                            </div>
+                            <div class="pay-your-fees-section2">
+                                <label for="choose-one">Choose One Payment Method</label><br>
+                                <select name="pay_method">
+                                    <option value="select" selected disabled>Select</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="credit card & debit cards">Credit card & Debit cards</option>
+                                    <option value="Google Pay">Google Pay</option>
+                                    <option value="Phone Pay">Phone Pay</option>
+                                    <option value="Cheques">Cheques</option>
+                                </select>
+                                <div>
+                                    <label for="remark">Remark</label><br>
+                                    <input class="remark" type="text" placeholder="Note: Who Pay the Fees">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ............ -->
+                        <button class="submit-button-of-pay-your-fee">Submit</button>
+                        <h3 class="fees-list-heading3">Fees List</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Sr No.</th>
+                                    <th>Fees Type</th>
+                                    <th>Total Fees </th>
+                                    <th>Fees Date</th>
+                                    <th>Fees Entry Date</th>
+                                    <th>Remark</th>
+                                </tr>
+                            </thead>
+                            <tbody class="data-table-tbody">
+                                <!-- ................Dynamic page......... -->
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="class-schedule">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sr.No</th>
+                                    <th>Subject</th>
+                                    <th>Class Start Time</th>
+                                    <th>Class End Time</th>
+                                    <th>Teacher Name</th>
+                                </tr>
+                            </thead>
+                            <tbody class="class-teacher-list-of-class-schedule">
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-identity" role="tabpanel" aria-labelledby="pills-identity-tab">
+                    <div class="identity-card-design-here">
+                        <div class="container">
+                            <div class="padding">
+                                <div class="font">
+                                    <div class="top">
+                                        <p>School Of India</p>
+                                        <img src="../../assets/img/info-img.png" alt="">
+                                    </div>
+
+                                    <div class="edetails">
+                                        <p class="edetails-name">Name : </p>
+                                        <p class="edetails-class">Class : </p>
+                                        <p class="edetails-roll-no">Roll No : </p>
+                                        <p class="edetails-father-name">Father Name : </p>
+                                        <p class="edetails-phone-no">Phone No : </p>
+                                    </div>
+                                    <div class="quCode">
+                                        <img src="../../assets/img/qr sample.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="submit-button">
+                            <button>Print</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div class="main-container-off-fee-details"> -->
+
+        <!-- Class Teacher List / Class Schedule -->
+
+
+
+        <!-- Identity Card Design Here  -->
+
+        <!-- </div> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="../../assets/js/index.js"></script>
+    <script src="../../login/main.js"></script>
+    <script src="../04_addStudent.js"></script>
+    <script src="../studentList/04_addStudentList.js"></script>
+</body>
+
+</html>

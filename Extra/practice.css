@@ -1,0 +1,184 @@
+.button-list{
+  width: 100%;
+  height: 4rem;
+  background-color: rgb(173, 255, 251);
+  display: flex;
+  align-items: center;
+}
+.button-list a{
+  margin: 0 0 0 4rem;
+}
+
+.main-container-off-fee-details{
+  background-color: rgb(200, 255, 246);
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.class_details_page {
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  margin: 20px auto;
+}
+
+.head_sec1 {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.head_sec1 h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  text-align: left;
+}
+
+.student_fees_sec, .pending_fees {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.student_fees_sec span, .pending_fees span {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  padding: 5px;
+}
+
+.total_fees, .pend_total {
+  font-weight: bold;
+  color: #d35400;
+}
+
+.reg_fees, .pend_reg {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+}
+
+.addmission_fees, .pend_add {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+}
+
+.exam_fees, .pend_exam {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+}
+
+.total_fees, .pend_total {
+  flex: 1;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student_fees_sec, .pending_fees {
+      flex-direction: column;
+  }
+
+  .student_fees_sec span, .pending_fees span {
+      text-align: left;
+      margin-bottom: 10px;
+      padding: 10px 5px;
+  }
+}
+.pay-your-fees{
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+}
+
+.pay-your-fees input , select{
+  width: 22rem;
+  height: 2.2rem;
+  font-size: 1.1rem;
+  margin-top: .4rem;
+
+}
+
+.pay-your-fees label{
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.pay-your-fees-heading{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.submit-button-of-pay-your-fee{
+  border: 3px solid rgb(138, 138, 138);
+  border-radius: 15px;
+  width: 8rem;
+  height: 3rem;
+  background-color: #f9c3bd;
+  margin-left: 42rem;
+  margin-top: 2rem;
+  
+}
+.submit-button-of-pay-your-fee:hover{
+  background-color: #0dc40d;
+  transition: .4s;
+}
+
+
+/* Table Code  */
+/* Table Styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.data-table th, .data-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.data-table thead {
+  background-color: #f2f2f2;
+}
+
+.data-table th {
+  font-weight: bold;
+  color: #333;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.data-table td {
+  color: #555;
+}
+
+.fees-list-heading3{
+  text-align: center;
+  margin-top: 2rem;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="../dashboard/02_dashboard.css">
+    <link rel="stylesheet" href="../Class/05_addClass.css">
+    <title>Add Class</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box1">
+            <div class="box1-logo">
+                <img src="../assets/img/student_portal.png" alt="sdflsd">
+            </div>
+            <div class="left-box-inner">
+                <div class="dashboard text-box">
+                    <a href="../dashboard/02_dashboard.html">Dashboard</a>
+                </div>
+                <div class="teacher text-box">
+                    <a href="../Teacher/03_addTeacher.html">Teacher</a>
+                </div>
+                <div class="student text-box">
+                    <a href="../Student/04_addStudent.html">Student</a>
+                </div>
+                <div class="add-class text-box">
+                    <a href="../Class/05_addClass.html">Add Class</a>
+                </div>
+                <div class="add-subject text-box">
+                    <a href="../Subject/06_addSubject.html">Add Subject</a>
+                </div>
+                <div class="log-out text-box">
+                    <a href="../assets/js/index.js">Log-out</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="box3">
+                <h1 class="heading">Add New Classes</h1>
+
+                <!-- Input fields for adding subject and user ID -->
+                <div class="data_class_name">
+                    <div class="add-class-section">
+                        <label for="className" class="label_class_name">Class Name</label>
+                        <input name="className" type="text" class="className" placeholder="Enter Class Name" required>
+                    </div>
+                    <div class="add-class-section">
+                        <label for="Registration_fees" class="label_class_name">Registration Fees</label>
+                        <input name="add-class-section" type="text" class="registration_fees"
+                            placeholder="Enter Registration Fees" required>
+                    </div>
+                    <div class="add-class-section">
+                        <label for="admission_fees" class="label_class_name">Admission Fees</label>
+                        <input name="admission_fees" type="text" class="admission_fees"
+                            placeholder="Enter Admission Fees" required>
+                    </div>
+                    <div class="add-class-section">
+                        <label for="exam_fees" class="label_class_name">Exam Fees</label>
+                        <input name="exam_fees" type="text" class="exam_fees" placeholder="Enter Exam Fees" required>
+                    </div>
+                </div>
+
+                <!-- Buttons for adding and deleting subjects -->
+
+                <button class="addClassBtn btn">Add Class</button>
+                <h2 class="class_list_heading">Class List</h2>
+
+                <!-- Table for displaying the list of added subjects -->
+                <div class="add_class_list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Class</th>
+                                <th>Fees</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="add_classs_list_tbody">
+                            <!-- Dynamic Data -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Class Schedule of subject details -->
+            <form name="subject_form" class="second-add-subject-form">
+                <input type="hidden" class="id-subject-form">
+                <h2 class="class-schedule">Class Schedule</h2>
+                <hr style="border: 1px solid rgb(75, 75, 75);">
+                <button class="subject-list-of-add-subject subject-list-of-add-subject-copy" type="text"><a href="#" style="text-decoration: none; font-size: 15px; color: black;">Subject
+                    List</a></button>
+                <button class="class-incharge-of-add-subject subject-list-of-add-subject-copy" type="text">Class
+                    Incharge</button>
+                <a class="btn btn-success" href="../Class/05_addClass.html">Back</a>
+                <div class="hide-data-for-incharge">
+                    <div class="add-subject-main">
+                        <!-- Dynamic Code -->
+
+                    </div>
+
+                    <button class="add-new-row-in-subject-detail">Add New Row</button>
+                    <button class="submit-row-in-data-base">Submit Rows</button>
+                </div>
+                <div class="incharge-section">
+                    <h2 style="text-align: center;">Select Class Incharge</h2>
+                    <form class="incharge-row-section-form">
+                        <div class="incharge-row-section">
+
+                        </div>
+                    </form>
+
+                    <button class="incharge-submit btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Edit Subject</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="subject">Change Subject : </label>
+                    <input name="subject" type="text" id="editSubjectInput" class="form-control1 edit-class-btn"
+                        placeholder="Enter new subject name">
+                    <hr style="border: 2px solid rgb(75, 75, 75); ">
+                    <label for="registration">Change Registration Fee : </label>
+                    <input name="registration" type="text" id="editSubjectInput"
+                        class="form-control2 edit-registration-fees" placeholder="Enter new subject name">
+                    <hr style="border: 2px solid rgb(75, 75, 75); ">
+                    <label for="admission">Change Admission Fees : </label>
+                    <input name="admission" type="text" id="editSubjectInput" class="form-control3 edit-admission-fees"
+                        placeholder="Enter new subject name">
+                    <hr style="border: 2px solid rgb(75, 75, 75); ">
+                    <label for="Exam_Fees">Change Exam Fee :</label>
+                    <input name="Exam_Fees" type="text" id="editSubjectInput" class="form-control4 edit-exam-fees"
+                        placeholder="Enter new subject name">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="editSubjectBtn">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="../login/main.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../Class/05_addClass.js"></script>
+</body>
+
+</html>

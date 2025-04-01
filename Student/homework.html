@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../dashboard/02_dashboard.css">
+    <link rel="stylesheet" href="./homework.css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <title>Student Homework</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box1">
+            <div class="box1-logo">
+                <img src="../assets/img/student_portal.png" alt="sdflsd">
+            </div>
+            <div class="left-box-inner">
+
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="box2"></div>
+            <div class="box3">
+                <div class="show-homework-list">
+                    <h2 style="text-align: center;">Student Homework</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="homework-dynamic-page">
+                            <!-- <tr>
+                            <td>2024-10-22</td>
+                            <td>Baby Shower</td>
+                            <td class="status">Completed</td>
+                            <td><button class="action-btn">Details</button></td>
+                        </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="homework-list-entry">
+                   <input type="hidden" id="homework_id">
+                    <button class="close-btn">Close</button>
+                    <h2 style="text-align: center; margin-top: 1rem;">Homework Details</h2>
+                    <div class="homework-title">
+                        <h3>Title</h3>
+                        <p class="answer"></p>
+                    </div>
+                    <div class="homework-content">
+                        <h3>Content</h3>
+                        <p class="content "></p>
+                    </div>
+                    <div class="homework-answer-section">
+                        <label for="summernote">Content</label>
+                        <textarea name="editor1" class="content-textarea" id="summernote" rows="5" cols="8"></textarea>
+                    </div>
+
+                    <button class="answer-submit-button">Submit<button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script src="/login/main.js"></script>
+    <script src="./homework.js"></script>
+
+</body>
+
+</html>

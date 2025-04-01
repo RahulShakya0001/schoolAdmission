@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --background-color: #f4feff;
+  --hover-bg-color: #71dccf;
+  --form-heading-color: rgb(78, 155, 146);
+  --button-hover-bg-color: rgb(124, 234, 234);
+  --teacher-heading-underline-color: rgb(53, 57, 37);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.box3 {
+  padding: 1rem;
+}
+
+/* Extra button */
+.watch-your-teacher-list {
+  background-color: var(--hover-bg-color);
+  position: absolute;
+  right: 5rem;
+  top: 1.7rem;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+}
+
+.watch-your-teacher-list:hover {
+  border: 1px solid black;
+}
+
+form {
+  height: 100vh;
+}
+
+.box3 .heading {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.label_subject_name {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+input {
+  margin: 5px;
+  width: 500px;
+  height: 40px;
+  outline: none;
+  padding-left: 8px;
+  border: 1px solid black;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.data_subject_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Form Css */
+.form-heading-techer-entry {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 30px;
+}
+
+.under-line {
+  margin-top: 1rem;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.main-flex,
+.flex-class {
+  display: flex;
+}
+
+.input-value {
+  width: 22rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.input-value input {
+  width: 20rem;
+  margin-top: 9px;
+  margin-left: 0.8rem;
+  border-radius: 5px;
+}
+
+.gender-border select {
+  border: 1px solid black;
+  height: 2.7rem;
+  width: 20rem;
+  margin-left: 1rem;
+  margin-top: .4rem;
+}
+
+.input-value label {
+  margin-left: .8rem;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.teacher-heading {
+  margin-top: 1rem;
+  margin-bottom: .6rem;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 550;
+  color: var(--form-heading-color);
+}
+
+.teacher-heading-underline {
+  width: 70rem;
+  margin: auto;
+  height: 2px;
+  background-color: var(--teacher-heading-underline-color);
+}
+.teacher-list-edit-button{
+  border: 2px solid rgb(82, 82, 82);
+  background-color: #F0F0F0;
+  padding: 1rem;
+  font-size: 15px;
+}
+.teacher-submit-button {
+  width: 15rem;
+  background-color: var(--hover-bg-color);
+  margin-left: 32rem;
+  margin-top: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+}
+
+.teacher-submit-button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+/* Select Dropdown */
+.select2-selection--multiple {
+  width: 20rem !important;
+  display: flex;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 2.7rem;
+  margin-left: 1rem;
+  border: 1px solid black !important;
+}
+
+.select-teaching-border {
+  margin-top: .6rem;
+  height: 2.7rem;
+}
+
+
+.manage-teacher-detail{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(197, 255, 244);
+  padding: 2rem;
+  display: none;
+}
+
+.button-list a{
+  margin-left: 2rem;
+}
+
+
+/* info-teacher-page-design.................... */
+.info-teacher-page-design{
+  width: 100%;
+  height: 100%;
+
+}
+.teacher-information{
+  margin-top: 2rem;
+  width: 100%;
+  height: 30rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding-left: 10rem;
+}
+
+.teacher-information-img{
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  margin-right: 5rem;
+  overflow: hidden;
+}
+.teacher-information-img img{
+  width: 400px;
+  height: 405px;
+
+}
+.teacher-information-text-data{
+  display: flex;
+  flex-direction: column;
+}
+.teacher-information-text-data span {
+  margin-bottom: 2.2rem;
+  font-size: 20px;
+  font-weight: 600;
+  /* margin-left: 5rem; */
+}
+
+/* Info design  */
+#pills-tab{
+  border: 1px solid black;
+  background-color: #f1f1f1;
+}
+
+
+/* Design Salary Details Seciton ............................... */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  /* width: 80%; */
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #d1e0e0;
+}
+
+.teacher-salary-details{
+  width: 100%;
+  height: 100%;
+}
+.salary-details-sec-1{
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.salary-details-sec-2{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+.pay-salary-input input{
+  width: 22rem;
+  height: 3rem;
+  font-size: 17px;
+}
+.salary-date-input input{
+  width: 22rem;
+  height: 3rem;
+  font-size: 17px;
+}
+.choose-one-payment-method{
+  margin-top: 5px;
+}
+.choose-one-payment-method span{
+  font-size: 20px;
+}
+.choose-one-payment-method select{
+  width: 22rem;
+  height: 3rem;
+  font-size: 17px;  
+}
+.submit-button{
+  margin-top: 3rem;
+  width: 100%;
+  text-align: center;
+}
+.submit-button button{
+  width: 300px;
+  height: 3rem;
+}
+.salary-details-sec-3-heading{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.style-html-litle{
+  margin-left: 6px;
+  font-size: 20px;
+}
+
+.submit-button button{
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.submit-button button:hover{
+  background-color: rgb(77, 234, 255);
+  color: black;
+}
+
+/* heading-salary-deteails-1 ......................*/
+.teacher-salary-class-details{
+  text-align: center;
+  margin-top: 3rem;
+
+}
+.heading-salary-deteails-1{
+  margin-bottom: 3rem;
+}
+
+.teacher-salary-class-details{
+  width: 100%;
+  height: 100vh;
+}

@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --background-color: #f4feff;
+    --hover-bg-color: #71dccf;
+    --form-heading-color: rgb(78, 155, 146);
+    --button-hover-bg-color: rgb(124, 234, 234);
+    --heading-underline-color: rgb(53, 57, 37);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.box3 {
+    padding: 1rem;
+}
+
+form {
+    height: 100vh;
+}
+
+.box3 .heading {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+
+
+/* Student List Edit Button */
+.addStudent-edit-button {
+    margin-right: 1rem;
+}
+
+
+/* Hide this data  */
+.manage-student-detail {
+    display: none;
+}
+
+.button-list {
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(193, 227, 235);
+    display: flex;
+    align-items: center;
+}
+
+.button-list a {
+    margin-left: 2rem;
+}
+
+.main-container-off-fee-details {
+    background-color: rgb(200, 255, 246);
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.class_details_page {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    margin: 20px auto;
+}
+
+.head_sec1 {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.head_sec1 h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    text-align: left;
+}
+
+.student_fees_sec,
+.pending_fees {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.student_fees_sec span,
+.pending_fees span {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    padding: 5px;
+}
+
+.total_fees,
+.pend_total {
+    font-weight: bold;
+    color: #d35400;
+}
+
+.reg_fees,
+.pend_reg {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.addmission_fees,
+.pend_add {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.exam_fees,
+.pend_exam {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.total_fees,
+.pend_total {
+    flex: 1;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .student_fees_sec,
+    .pending_fees {
+        flex-direction: column;
+    }
+
+    .student_fees_sec span,
+    .pending_fees span {
+        text-align: left;
+        margin-bottom: 10px;
+        padding: 10px 5px;
+    }
+}
+
+.pay-your-fees {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+}
+
+.pay-your-fees input,
+select {
+    width: 22rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+    margin-top: .4rem;
+
+}
+
+.pay-your-fees label {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.pay-your-fees-heading {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.submit-button-of-pay-your-fee {
+    border: 3px solid rgb(138, 138, 138);
+    border-radius: 15px;
+    width: 8rem;
+    height: 3rem;
+    background-color: #f9c3bd;
+    margin-left: 42rem;
+    margin-top: 2rem;
+
+}
+
+.submit-button-of-pay-your-fee:hover {
+    background-color: #0dc40d;
+    transition: .4s;
+}
+
+
+/* Table Code  */
+/* Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.data-table thead {
+    background-color: #f2f2f2;
+}
+
+.data-table th {
+    font-weight: bold;
+    color: #333;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.data-table td {
+    color: #555;
+}
+
+.fees-list-heading3 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+/* Info Page Design.......................  */
+
+.info-page-design {
+    /* background-color: rgb(252, 252, 252); */
+    width: 100%;
+    height: 600px;
+    margin-top: 45rem;
+    margin-left: -10rem;
+    /* position: absolute; */
+    /* top: 10rem; */
+    padding: 4rem;
+
+
+}
+
+.info-page-border {
+    height: 100%;
+    width: 900px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.info-page-border .info-page-img {
+    margin-left: 5rem;
+}
+
+.info-page-border .info-page-text-data {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7rem;
+
+}
+
+.info-page-border .info-page-text-data span {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 20px;
+}
+/* class-schedule */
+.class-schedule{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 4rem;
+}
+
+/* identity Card Desing */
+.identity-card-design-here{
+    /* position: absolute; */
+    /* top: 4rem; */
+    margin-top: 50rem;
+
+}
+.container-print {
+    /* height: 100vh; */
+    /* background-color: #eaeaea; */
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+.font {
+    height: 400px;
+    width: 305px;
+    border-radius: 10px;
+    background-size: 225px 375px;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    background-color: rgb(215, 255, 166);
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top img {
+    height: 90px;
+    width: 90px;
+    background-color: #e6ebe0;
+    border-radius: 57px;
+    object-fit: content;
+    border: 3px solid rgba(255, 255, 255, .2);
+
+}
+
+.edetails {
+    text-transform: capitalize;
+    margin-left: 1rem;
+}
+
+
+.edetails p {
+    font-weight: 600;
+    text-align: justify;
+}
+.quCode{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin-left: 5rem;
+    
+}
+.quCode img{
+    width: 98px;
+}
+.submit-button button{
+    margin-left: 43rem;
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+/* .back-buttton */

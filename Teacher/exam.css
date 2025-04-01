@@ -1,0 +1,118 @@
+.body {
+    scroll-behavior: smooth;
+    z-index: 1;
+}
+
+label {
+    display: block;
+}
+
+.heading-all-class {
+    text-align: center;
+}
+
+.input-section {
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.input-section .first-input,
+.second-input,
+select {
+    width: 22rem;
+    height: 3rem;
+    /* margin-top: 1rem; */
+}
+
+.question textarea {
+    color: black;
+    padding: 1rem 0 0 1rem;
+    font-size: 19px;
+}
+
+.option-for-question h3 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.option-for-question .option-no-one,
+.option-no-two,
+.option-no-three,
+.option-no-four,
+input {
+    width: 40rem;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.answer-or-submit-button button {
+    width: 150px;
+    height: 60px;
+    display: block;
+    margin-top: 2rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+}
+
+.show-data-fiter-click {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.fiter-button {
+    width: 200px;
+    height: 50px;
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+
+}
+
+/* Table Design */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    /* background-color: #1e1e1e; */
+}
+
+th,
+td {
+    border: 1px solid #2f2f2f;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #adffeb;
+    color: #000000;
+}
+
+tr:nth-child(even) {
+    background-color: #c9c9c9;
+}
+
+.action-width {
+    width: 290px;
+}
+
+tr:hover {
+    background-color: #fff583;
+}
+.modal-option-for-question{
+    font-size: 13px;
+}
+.modal-option-for-question input{
+    width: 22rem;
+    font-size: 13px;
+    margin: 0;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dashboard/02_dashboard.css">
+    <link rel="stylesheet" href="./fee.css">
+    <title>Student Fee Details</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box1">
+            <div class="box1-logo">
+                <img src="../assets/img/student_portal.png" alt="sdflsd">
+            </div>
+            <div class="left-box-inner">
+
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="box2"></div>
+            <div class="box3">
+                <div class="class_details_page">
+                    <!-- Hidden input  -->
+                    <input class="hidden_student_id" type="hidden">
+                    <div class="head_sec1 ">
+                        <h4>Student Fees Details</h4>
+                        <div class="student_fees_sec">
+                            <span class="reg_fees">Registration Fees : </span>
+                            <span class="addmission_fees">Admission Fees : </span>
+                            <span class="exam_fees">Exam Fees : </span>
+                            <span class="total_fees">Total Fees : </span>
+                        </div>
+                    </div>
+                    <div class="head_sec1">
+                        <h4>Pending Fees</h4>
+                        <div class="pending_fees">
+                            <span class="pend_reg">Registration Fees : </span>
+                            <span class="pend_add">Admission Fees : </span>
+                            <span class="pend_exam">Exam Fees : </span>
+                            <span class="pend_total">Total Fees : </span>
+                        </div>
+                    </div>
+                    <!-- ............ -->
+                    <h3 class="fees-list-heading3">Fees List</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Sr No.</th>
+                                <th>Fees Type</th>
+                                <th>Total Fees </th>
+                                <th>Fees Date</th>
+                                <th>Fees Entry Date</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody class="data-table-tbody">
+                            <!-- ................Dynamic page......... -->
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/assets/js/index.js"></script>
+        <script src="/login/main.js"></script>
+        <script src="./fee.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dashboard/02_dashboard.css">
+    <link rel="stylesheet" href="./exam.css">
+    <title>Student Exam</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box1">
+            <div class="box1-logo">
+                <img src="../assets/img/student_portal.png" alt="sdflsd">
+            </div>
+            <div class="left-box-inner">
+
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="box2"></div>
+            <div class="box3">
+
+                <div class="show-list-data-of-exam">
+                    <h2 style="text-align: center; margin-top: 4rem;">Online Exam</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Subject</th>
+                                <th>Action</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="student-assign-list">
+                           <!-- dynamic page -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Show List of Exam -->
+                 <div class="show-result">
+                    <div class="first-sec-of-result">
+                        <p class="show-subject-of-result">Subject : </p>
+                        <button class="close-the-page">Close</button>   
+                    </div>
+                    <div class="second-sec-of-result">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Exam Title</th>
+                                    <th class="exam_title"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Total Question : </td>
+                                    <td class="total_question"></td>
+                                </tr>
+                                <tr>
+                                    <td>Per Question Marks : </td>
+                                    <td class="question_marks"></td>
+                                </tr>
+                                <tr>
+                                    <td>Total Marks : </td>
+                                    <td class="total_marks"></td>
+                                </tr>
+                                <tr>
+                                    <td>Pass Marks : </td>
+                                    <td class="pass_marks"></td>
+                                </tr>
+                                <tr>
+                                    <td>Correct Answer : </td>
+                                    <td >
+                                        <span class="right_question"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Student Total Marks : </td>
+                                    <td class="student_marks"></td>
+                                </tr>
+                                <tr>
+                                    <td>Status : </td>
+                                    <td class="student_status"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/assets/js/index.js"></script>
+    <script src="/login/main.js"></script>
+    <script src="./exam.js"></script>
+
+</body>
+
+</html>
