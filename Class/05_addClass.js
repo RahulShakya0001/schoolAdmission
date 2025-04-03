@@ -2,15 +2,6 @@ function timepicker() {
     $('input.timepicker').timepicker({});
 };
 
-
-// const getFromLocalStorage = function (key) {
-//     try {
-//         return JSON.parse(localStorage.getItem(key)) || [];
-//     } catch (error) {
-//         return [];
-//     }
-// };
-
 var htmls = "";
 db.class.forEach((v, i) => {
     htmls += `

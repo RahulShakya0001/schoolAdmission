@@ -13,14 +13,12 @@ sortedSubjects.forEach((v, i) => {
         <td >${v_subject}</td>    
         <td>
         <button class="delete_button" subjectId="${v.id}">Delete</button>
-        <button type="button" class="btn btn-primary btn-sets" subjectIdDel="${v.id}" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
+        <button type="button" class="btn btn-primary edit_btn" subjectId="${v.id}" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
         </td>
         </tr>
         `;
 });
 $("tbody").html(htmls);
-
-
 
 $(".addSubjectBtn").click(() => {
     let subjectName = $(".subjectName").val().toLowerCase();
@@ -42,21 +40,32 @@ $(".addSubjectBtn").click(() => {
     }
 });
 
+$(".edit_btn").click(function () {
+    let subjectId = $(this).attr("subjectId"); 
+    var edit_data = db.subject.find((v) => v.id == subjectId); 
 
-$(".btn-sets").click(function () {
-    let subjectId = $(this).attr("subjectIdDel");
-    var edit_data = db.subject.find((v) => v.id == subjectId);
-    $('.edit_subject').val(edit_data.subject);
-    $("#editSubjectBtn").click(() => {
-        var id_del = db.subject.findIndex((v) => v.id == subjectId);
-        var save_change = $(".edit_subject").val();
+    if (!edit_data) {
+        alert("Subject not found!");
+        return;
+    }
+
+    let newSubjectName = prompt("Enter new subject name:", edit_data.subject); 
+
+    if (newSubjectName && newSubjectName.trim() !== "") {
+        var id_del = db.subject.findIndex((v) => v.id == subjectId); 
+
         if (id_del !== -1) {
-            db.subject[id_del].subject = save_change;
-            saveToLocalStorage("Database", db);
+            db.subject[id_del].subject = newSubjectName.trim(); 
+            saveToLocalStorage("Database", db); 
+            alert("Subject Updated Successfully!");
             window.location.reload();
         }
-    })
+    } else {
+        alert("Invalid subject name!");
+    }
 });
+
+
 
 $(".delete_button").click(function () {
     let subjectId = $(this).attr("subjectId");
