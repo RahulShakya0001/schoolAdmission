@@ -6,7 +6,7 @@
 }
 
 :root {
-    --bg-color: url(../assets/img/bg.jpg) no-repeat;
+    --bg-color: url(../assets/img/loginim.jpg) no-repeat;
     --bg-size: cover;
     --bg-position: center;
     --border-color: rgba(255, 255, 255, .2);
