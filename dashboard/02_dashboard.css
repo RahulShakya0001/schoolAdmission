@@ -14,7 +14,7 @@ body{
 }
 :root {
     --background-color: #000000;
-    --main-background: #fbfbfb;
+    --main-background: #ffffff;
     --box-bg-color: #D4FD52;
     --text-color: rgb(0, 0, 0);
     --hover-bg-color: #dbff66;
@@ -124,7 +124,7 @@ body{
 .box2{
     width: 313px;
     height: 100%;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .box3 {

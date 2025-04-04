@@ -80,14 +80,16 @@ document.querySelector(".box1-logo").addEventListener("click", function () {
 
     if (isCollapsed) {
         sidebar.style.width = "80px";
+        document.querySelector('.box2').style.width = "80px";
         document.querySelectorAll(".text-box a").forEach(el => el.style.display = "none");
         sidebar.style.padding = "1rem";
         logoImg.style.width = "50px";
-    } else {
+      } else {
+        document.querySelector('.box2').style.width = "313px";
         sidebar.style.width = "260px";
         document.querySelectorAll(".text-box a").forEach(el => el.style.display = "flex");
         logoImg.style.width = "80px";
-        logoImg.style.padding = "8px";
+        // logoImg.style.padding = "8px";
     }
 });
 
