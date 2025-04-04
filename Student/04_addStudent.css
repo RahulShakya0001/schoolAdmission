@@ -1,173 +1,179 @@
-.box3 {
-    width: 100%;
-    height: 100vh;
-    /* border: 1px solid black; */
-    margin: 1rem;
-    padding: 1rem;
-}
+.box_in{
 
-/* ---------------Form Css------------------ */
+}
 input {
-    margin: 5px;
-    width: 500px;
-    height: 40px;
-    outline: none;
-    padding-left: 8px;
-    border: 1px solid black;
-    font-size: 16px;
+  margin: 5px;
+  width: 500px;
+  height: 40px;
+  outline: none;
+  padding-left: 8px;
+  border: 1px solid black;
+  font-size: 16px;
 }
 
 .form-heading-addStudent-entry {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 30px;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 30px;
 }
 
 .under-line {
-    margin-top: 1rem;
-    border: none;
-    width: 100%;
-    height: 1px;
-    background-color: black;
+  margin-top: 1rem;
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: black;
 }
 
 .main-flex {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-class {
-    display: flex;
+  display: flex;
 }
 
 .input-value {
-    width: 22rem;
-    margin-left: 3rem;
-    margin-top: 1rem;
+  width: 22rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
 }
 
 .input-value input {
-    width: 20rem;
-    margin-top: 9px;
-    margin-left: 0.8rem;
-    border-radius: 5px;
+  width: 20rem;
+  margin-top: 9px;
+  margin-left: 0.8rem;
+  border-radius: 5px;
+}
+.input-value input:focus{
+    box-shadow: 0 0 10px rgb(59, 154, 255);
 }
 .select-teaching-border select {
-    border: 1px solid black;
-    height: 2.7rem;
-    width: 20rem;
-    margin-left: 1rem;
-    margin-top: .4rem;
+  border: 1px solid black;
+  height: 2.7rem;
+  width: 20rem;
+  margin-left: 1rem;
+  margin-top: 0.4rem;
+  
+}
+select{
+    border-radius: 6px !important;
+}
+input{
+    border-radius: 6px !important;
 }
 
 .gender-border select {
-    border: 1px solid black;
-    height: 2.7rem;
-    width: 20rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
+  border: 1px solid black;
+  height: 2.7rem;
+  width: 20rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
-select{
-    font-size: 16px;
+select {
+  font-size: 16px;
 }
 
 .input-value label {
-    margin-left: .8rem;
-    font-size: 20px;
-    font-weight: 500;
+  margin-left: 0.8rem;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .addStudent-heading {
-    margin-top: 1rem;
-    margin-bottom: .6rem;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 550;
-    color: var(--form-heading-color);
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 550;
 }
 
 .addStudent-heading-underline {
-    width: 70rem;
-    margin: auto;
-    border: none;
-    height: 2px;
-    background-color: var(--addStudent-heading-underline-color);
+  width: 70rem;
+  margin: auto;
+  border: none;
+  height: 2px;
+  background-color: var(--addStudent-heading-underline-color);
 }
 
 .addStudent-submit-button {
-    width: 15rem;
-    height: 3rem;
-    background-color: #71dccf;
-    margin-left: 32rem;
-    margin-top: 2rem;
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 5px;
-    outline: none;
-    border: none;
+  width: 15rem;
+  height: 3rem;
+  margin-left: 32rem;
+  margin-top: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #000;
+  font-size: 15px;
+  border: none;
+  color: white;
 }
 
 .addStudent-submit-button:hover {
-    background-color:rgb(157, 254, 241) ;
+  background-color: #323232;
 }
 
 /* Select Dropdown */
 .select2-selection--multiple {
-    width: 20rem !important;
-    display: flex;
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 2.7rem;
-    margin-left: 1rem;
-    border: 1px solid black !important;
+  width: 20rem !important;
+  display: flex;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 2.7rem;
+  margin-left: 1rem;
+  border: 1px solid black !important;
 }
 
 .select-teaching-border {
-    margin-top: .6rem;
-    height: 2.7rem;
+  margin-top: 0.6rem;
+  height: 2.7rem;
 }
 
 .select2-results__option {
-    height: 2.7rem;
-    background-color: aqua;
+  height: 2.7rem;
+  background-color: aqua;
 }
 
 .my-new-option {
-    margin-left: 2rem !important;
+  margin-left: 2rem !important;
 }
 
 li {
-    width: 20rem;
+  width: 20rem;
 }
 
 .edit-previous-data {
-    width: 15rem;
-    background-color: #71dccf;
-    margin-left: 32rem;
-    margin-top: 2rem;
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    display: none;
+  width: 15rem;
+  background-color: #71dccf;
+  margin-left: 32rem;
+  margin-top: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  display: none;
 }
 
-.watch-your-student-list{
-    margin-left: 60rem;
-    border: 1px solid black;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    background-color: rgb(190, 255, 180);
-    cursor: pointer;
+.watch-your-student-list {
+  margin-left: 56rem;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: rgb(7, 7, 7);
+  cursor: pointer;
+  color: white;
+  padding: 14px 0px;
 }
 
-.watch-your-student-list:hover{
-    background-color: rgb(255, 164, 164);
+.watch-your-student-list:hover {
+  background-color: #323232;
 }
-

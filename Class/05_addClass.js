@@ -15,9 +15,9 @@ db.class.forEach((v, i) => {
     <p>Total Fees: ${v.registration_fees + v.admission_fees + v.exam_fees}</p>
     </td>
     <td>
-    <button class="delete_button" classId="${v.id}">Delete</button>
+    <button class="delete_button btn btn-danger" classId="${v.id}">Delete</button>
     <button type="button" class="btn btn-primary btn-sets" classIdEdit="${v.id}" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
-    <button type="button" class="btn btn-primary sub-details" subjectdetailid="${v.id}">Subject details</button>
+    <button type="button" class="btn btn-warning sub-details" subjectdetailid="${v.id}">Subject details</button>
     </td>
 </tr>
 `;
@@ -162,7 +162,7 @@ function data_show(edit = {}) {
     add_new_row += '    </div>';
     add_new_row += '    <div class="add-subject-list-2-copy add-subject-list-4">';
     add_new_row += '        <h5>Action Button</h5>';
-    add_new_row += '        <button class="delete-button-of-add-subject">Delete</button>';
+    add_new_row += '        <button class="btn btn-danger delete-button-of-add-subject">Delete</button>';
     add_new_row += '    </div>';
     add_new_row += '</div>';
     return add_new_row;

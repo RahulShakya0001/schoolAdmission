@@ -1,133 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dashboard/02_dashboard.css">
-    <link rel="stylesheet" href="../Student/04_addStudent.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Student/04_addStudent.css" />
+    <link rel="stylesheet" href="../dashboard/02_dashboard.css" />
     <title>Dashboard Login</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <div class="box1">
-            <div class="box1-logo">
-                <img src="../assets/img/student_portal.jpeg" alt="sdflsd">
-            </div>
-            <div class="left-box-inner">
-                <!-- <div class="dashboard text-box">
-                  <a href="../dashboard/02_dashboard.html">Dashboard</a>
+      <div class="box1">
+        <div class="box1-logo">
+          <img src="../assets/img/student_portal.jpeg" alt="sdflsd" />
+        </div>
+        <div class="left-box-inner"></div>
+      </div>
+      <div class="right-box">
+        <div class="box2"></div>
+        <div class="box3">
+          <div class="box_in">
+            <form class="reset_form">
+              <h1 class="form-heading-addStudent-entry">Student Entry</h1>
+              <a class="watch-your-student-list">Watch Your Student List</a>
+              <hr class="under-line" />
+              <div class="main-flex">
+                <h4 class="addStudent-heading">Student Login Details</h4>
+                <hr class="addStudent-heading-underline" />
+                <div class="flex-class">
+                  <div class="input-1 input-value">
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Enter name"
+                      required
+                    />
+                  </div>
+                  <div class="input-2 input-value">
+                    <label for="username">User Name</label>
+                    <input
+                      type="text"
+                      id="username"
+                      placeholder="Enter user name"
+                      required
+                    />
+                  </div>
+                  <div class="input-3 input-value">
+                    <label for="password">Password</label>
+                    <input
+                      type="text"
+                      id="password"
+                      placeholder="Enter password"
+                      required
+                    />
+                  </div>
                 </div>
-                <div class="teacher text-box">
-                  <a href="../Teacher/03_addTeacher.html">Teacher</a>
+
+                <h4 class="addStudent-heading">Student Info</h4>
+                <hr class="addStudent-heading-underline" />
+
+                <div class="flex-class">
+                  <div class="input-4 input-value">
+                    <label for="phone">Phone No.</label>
+                    <input
+                      type="tel"
+                      min="1"
+                      max="10"
+                      id="phone"
+                      placeholder="Enter phone number"
+                      required
+                    />
+                  </div>
+                  <div class="input-5 input-value">
+                    <label for="father">Father Name</label>
+                    <input
+                      type="text"
+                      id="father"
+                      placeholder="Enter father's name"
+                      required
+                    />
+                  </div>
+                  <div class="input-6 input-value">
+                    <label for="address">Address</label>
+                    <input
+                      type="text"
+                      id="address"
+                      placeholder="Enter address"
+                    />
+                  </div>
                 </div>
-                <div class="student text-box">
-                  <a href="./04_addStudent.html">Student</a>
+
+                <h4 class="addStudent-heading">Class and Subject Details</h4>
+                <hr class="addStudent-heading-underline" />
+
+                <div class="flex-class">
+                  <div class="input-7 input-value">
+                    <label>Gender</label>
+                    <div class="gender-border">
+                      <select name="gender" class="form-control" required>
+                        <option selected disabled>select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-8 input-value">
+                    <label>Select Class</label>
+                    <div class="select-teaching-border">
+                      <select class="input-7-input" required>
+                        <!-- dynamic page......... -->
+                        <option value="" selected disabled>Select</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
-                <div class="add-class text-box">
-                  <a href="../Class/05_addClass.html">Add Class</a>
-                </div>
-                <div class="add-subject text-box">
-                  <a href="../Subject/06_addSubject.html">Add Subject</a>
-                </div>
-                <div class="log-out text-box">
-                  <a href="../login/index.html">Log-out</a>
-                </div> -->
               </div>
+
+              <!-- Show Student List  -->
+              <div class="show-student-list"></div>
+
+              <button class="addStudent-submit-button">Submit</button>
+              <button class="edit-previous-data btn btn-primary">Edit</button>
+            </form>
+          </div>
         </div>
-        <div class="right-box">
-            <div class="box2"></div>
-            <div class="box3">
-                <form class="reset_form">
-                    <h1 class="form-heading-addStudent-entry">Student Entry</h1>
-                    <h3 class="watch-your-student-list">Watch Your Student List</h3>
-                    <hr class="under-line" />
-                    <div class="main-flex">
-                        <h4 class="addStudent-heading">Student Login Details</h4>
-                        <hr class="addStudent-heading-underline" />
-                        <div class="flex-class">
-                            <div class="input-1 input-value">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" placeholder="Enter name" required>
-                            </div>
-                            <div class="input-2 input-value">
-                                <label for="username">User Name</label>
-                                <input type="text" id="username" placeholder="Enter user name" required>
-                            </div>
-                            <div class="input-3 input-value">
-                                <label for="password">Password</label>
-                                <input type="text" id="password" placeholder="Enter password" required>
-                            </div>
-                        </div>
-
-                        <h4 class="addStudent-heading">Student Info</h4>
-                        <hr class="addStudent-heading-underline" />
-
-                        <div class="flex-class">
-                            <div class="input-4 input-value">
-                                <label for="phone">Phone No.</label>
-                                <input type="tel" min="1" max="10" id="phone" placeholder="Enter phone number" required>
-                            </div>
-                            <div class="input-5 input-value">
-                                <label for="father">Father Name</label>
-                                <input type="text" id="father" placeholder="Enter father's name" required>
-                            </div>
-                            <div class="input-6 input-value">
-                                <label for="address">Address</label>
-                                <input type="text" id="address" placeholder="Enter address">
-                            </div>
-                        </div>
-
-                        <h4 class="addStudent-heading">Class and Subject Details</h4>
-                        <hr class="addStudent-heading-underline" />
-
-                        <div class="flex-class">
-                            <div class="input-7 input-value">
-                                <label>Gender</label>
-                                <div class="gender-border">
-                                    <select name="gender" class="form-control" required>
-                                        <option selected disabled>select</option>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-8 input-value">
-                                <label>Select Class</label>
-                                <div class="select-teaching-border">
-                                    <select class="input-7-input" required>
-                                        <!-- dynamic page......... -->
-                                        <option value="" selected disabled>Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Show Student List  -->
-                    <div class="show-student-list">
-
-                    </div>
-
-
-                    <button class="addStudent-submit-button">Submit</button>
-                    <button class="edit-previous-data btn btn-primary">Edit</button>
-                </form>
-            </div>
-        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"  crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
     <script src="../assets/js/index.js"></script>
     <script src="../login/main.js"></script>
     <script src="../Student/04_addStudent.js"></script>
-
-</body>
-
+  </body>
 </html>
