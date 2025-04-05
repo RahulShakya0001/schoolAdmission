@@ -2,12 +2,12 @@ $(document).ready(function () {
     $('.js-example-basic-multiple').select2();
 });
 
+
 // Switch button
 $(".watch-your-teacher-list").click(() => {
     window.location.href = "../Teacher/teacherList/03_teacherList.html";
 });
 
-// Populate class options
 
 var htmles = '';
 if (db.class && db.class.length > 0) {
@@ -82,8 +82,9 @@ $(".teacher-submit-button").click(function (e) {
 
 // Edit process
 
-let pre_id = window.location.href.split("=")[1]; // Extract the ID from URL
+let pre_id = window.location.href.split("=")[1];
 let previous_teacher = db.teacher.find((teacher) => teacher.id == pre_id);
+// let teacher_data = db.teacher.find(t => t.id == 5);
 
 if (previous_teacher) {
     $(".teacher-submit-button").css("display", "none")
@@ -100,8 +101,14 @@ if (previous_teacher) {
     $(".input-9 input").val(previous_teacher.salary);
     console.log(previous_teacher.joiningDate);
 }
-
+// emptyDbTable("users")
 $(".edit-privious-data").click(function (e) {
+    e.preventDefault();
+
+    let user_len = db.teacher;
+    let sortVal = user_len.sort((a, b) => b.id - a.id)[0];
+    var oj = sortVal != null ? sortVal.id : 0;
+
     let name = $(".input-1 input").val();
     let userName = $(".input-2 input").val();
     let password = $(".input-3 input").val();
@@ -111,9 +118,9 @@ $(".edit-privious-data").click(function (e) {
     let select_value = $('.js-example-basic-multiple').val();
     let gender_select = $(".input-8 select").val();
     let salary = $(".input-9 input").val();
-    e.preventDefault();
 
     if (name && userName && password && phoneNumber && email && qualification && select_value && gender_select && salary) {
+
         let updated_teacher = {
             id: pre_id * 1, // Keep the same ID
             name: name,
@@ -128,8 +135,27 @@ $(".edit-privious-data").click(function (e) {
             salary: salary,
         };
 
+        // ✅ Corrected User Update Object
+        let teacher_update = {
+            id: db.users.find(u => u.relation_id == pre_id && u.relation_table == "teacher")?.id || (db.users.length + 1),
+            sname: updated_teacher.name,
+            username: updated_teacher.userName,
+            password: updated_teacher.password,
+            user_role: 2,
+            relation_id: pre_id * 1,
+            relation_table: "teacher"
+        };
+
         let teacherIndex = db.teacher.findIndex((teacher) => teacher.id == pre_id);
+        let user_in = db.users.findIndex((user) => user.relation_id == pre_id && user.relation_table == "teacher");
+
         if (teacherIndex !== -1) {
+            if (user_in !== -1) {
+                db.users[user_in] = teacher_update; // Update existing user
+            } else {
+                db.users.push(teacher_update); // Add new user if missing
+            }
+
             db.teacher[teacherIndex] = updated_teacher;
             localStorage.setItem("Database", JSON.stringify(db));
             window.location.href = "../Teacher/teacherList/03_teacherList.html";

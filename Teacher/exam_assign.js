@@ -36,6 +36,7 @@ $(".select-class-for-list select").on("change", function () {
         $(".select-subject-for-list select").append(subjectOptions);
     }
 });
+
 $(".submit-button-of-assign-exam button").click(function (v) {
     v.preventDefault();
     let title = $(".title-of-assign input").val()

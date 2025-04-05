@@ -1,202 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./03_teacherList.css" />
+    <link rel="stylesheet" href="../../dashboard/02_dashboard.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../dashboard/02_dashboard.css">
-  <link rel="stylesheet" href="./03_teacherList.css">
+    <title>Teacher list</title>
+  </head>
 
-  <title>Teacher list</title>
-</head>
-
-<body>
-  <div class="main hide-main-class">
-    <div class="box1">
-      <div class="box1-logo">
-        <img src="../../assets/img/student_portal.jpeg" alt="sdflsd">
+  <body>
+    <div class="main hide-main-class">
+      <div class="box1">
+        <div class="box1-logo">
+          <img src="../../assets/img/student_portal.jpeg" alt="sdflsd" />
+        </div>
+        <div class="left-box-inner"></div>
       </div>
-      <div class="left-box-inner">
-        <div class="dashboard text-box">
-          <a href="../../dashboard/02_dashboard.html">Dashboard</a>
-        </div>
-        <div class="teacher text-box">
-          <a href="../03_addTeacher.html">Teacher</a>
-        </div>
-        <div class="student text-box">
-          <a href="../../Student/04_addStudent.html">Student</a>
-        </div>
-        <div class="add-class text-box">
-          <a href="../../Class/05_addClass.html">Add Class</a>
-        </div>
-        <div class="add-subject text-box">
-          <a href="../../Subject/06_addSubject.html">Add Subject</a>
-        </div>
-        <div class="log-out text-box">
-          <a href="../../index.html">Log-out</a>
+      <div class="right-box">
+        <div class="box2"></div>
+        <div class="box3">
+          <div class="box-in">
+            <div class="teaher-list-show">
+              <table cellpadding="10" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Teacher Login User and Pass</th>
+                    <th>User</th>
+                    <th>Subject and Class</th>
+                    <th>Edit and Delete</th>
+                  </tr>
+                </thead>
+                <tbody class="add-teacher-list"></tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="right-box">
-      <div class="box3">
-        <div class="teaher-list-show">
-          <table cellpadding="10" cellspacing="0">
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Teacher Login User and Pass</th>
-                <th>User</th>
-                <th>Subject and Class</th>
-                <th>Edit and Delete</th>
-              </tr>
-            </thead>
-            <tbody class="add-teacher-list">
 
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Teacher Code  -->
-
-  <div class="manage-teacher-detail">
-    <input type="hidden" class="hidden-teacher-id">
-    <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active info-teacher-page" id="pills-home-tab" data-bs-toggle="pill"
-          data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-          aria-selected="true">Info</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link salary-details" id="pills-profile-tab" data-bs-toggle="pill"
-          data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-          aria-selected="false">Salary Details</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link Teacher-class-details" id="pills-contact-tab" data-bs-toggle="pill"
-          data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-          aria-selected="false">Teacher Class Details</button>
-      </li>
-      <a style="margin-left: 9rem; padding-top: 13px;" class="back-button btn btn-outline-success" href="#">Back</a>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-        <div class="info-teacher-page-design">
-          <div class="teacher-information">
-            <div class="teacher-information-img">
-              <img src="../../assets/img/teacher.img" alt="">
-            </div>
-            <div class="teacher-information-text-data">
-              <span class="teacher-name">Name : </span>
-              <span class="teacher-class">Teaching Class : </span>
-              <span class="taacher-qualification">Qualificatioin : </span>
-              <span class="teacher-phone-no">Phone No : </span>
-              <span class="teacher-gender">Gender : </span>
+    <div class="manage-teacher-detail">
+      <input type="hidden" class="hidden-teacher-id" />
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active info-teacher-page"
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
+            Info
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link salary-details"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+          >
+            Salary Details
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link Teacher-class-details"
+            id="pills-contact-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contact"
+            type="button"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+          >
+            Teacher Class Details
+          </button>
+        </li>
+        <a
+          style="margin-left: 9rem; padding-top: 13px"
+          class="back-button btn btn-outline-success"
+          href="#"
+          >Back</a
+        >
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          <div class="info-teacher-page-design">
+            <div class="teacher-information">
+              <div class="teacher-information-img">
+                <img src="../../assets/img/teacher.img" alt="" />
+              </div>
+              <div class="teacher-information-text-data">
+                <span class="teacher-name">Name : </span>
+                <span class="teacher-class">Teaching Class : </span>
+                <span class="taacher-qualification">Qualificatioin : </span>
+                <span class="teacher-phone-no">Phone No : </span>
+                <span class="teacher-gender">Gender : </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-        <div class="teacher-salary-details">
-
-          <div class="salary-details-sec-1">
-            <h3 class="total-salary-heading">Total Salary : 0</h3>
-            <h3 class="pending-salary-heading">Pending Salary : 0</h3>
-          </div>
-
-          <div class="salary-details-sec-2">
-
-            <div class="pay-salary-input">
-              <span class="style-html-litle">Pay Salary</span><br>
-              <input type="text" placeholder="Enter Salary">
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          <div class="teacher-salary-details">
+            <div class="salary-details-sec-1">
+              <h3 class="total-salary-heading">Total Salary : 0</h3>
+              <h3 class="pending-salary-heading">Pending Salary : 0</h3>
             </div>
 
-            <div class="salary-date-input">
-              <span class="style-html-litle">Salary Date</span><br>
-              <input type="date">
+            <div class="salary-details-sec-2">
+              <div class="pay-salary-input">
+                <span class="style-html-litle">Pay Salary</span><br />
+                <input type="text" placeholder="Enter Salary" />
+              </div>
+
+              <div class="salary-date-input">
+                <span class="style-html-litle">Salary Date</span><br />
+                <input type="date" />
+              </div>
+
+              <div class="choose-one-payment-method">
+                <span>Choose One Payment Method</span><br />
+                <select class="pay-method-sec">
+                  <option value="Select" selected disabled>Select</option>
+                  <option value="cash">Cash</option>
+                  <option value="credit card & debit cards">
+                    Credit card & Debit cards
+                  </option>
+                  <option value="Google Pay">Google Pay</option>
+                  <option value="Phone Pay">Phone Pay</option>
+                  <option value="Cheques">Cheques</option>
+                </select>
+              </div>
+            </div>
+            <div class="submit-button">
+              <button>Submit</button>
             </div>
 
-            <div class="choose-one-payment-method">
-              <span>Choose One Payment Method</span><br>
-              <select class="pay-method-sec">
-                <option value="Select" selected disabled>Select</option>
-                <option value="cash">Cash</option>
-                <option value="credit card & debit cards">Credit card & Debit cards</option>
-                <option value="Google Pay">Google Pay</option>
-                <option value="Phone Pay">Phone Pay</option>
-                <option value="Cheques">Cheques</option>
-              </select>
+            <div class="salary-details-sec-3">
+              <h2 class="salary-details-sec-3-heading">Fees List</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Sr. No</th>
+                    <th>Pay Salary</th>
+                    <th>Salary Date</th>
+                    <th>Salary Entry Date</th>
+                  </tr>
+                </thead>
+                <tbody class="teacher-salary-details-body-section">
+                  <!-- Enter here dynamic data only  -->
+                </tbody>
+              </table>
             </div>
-
           </div>
-          <div class="submit-button">
-            <button>Submit</button>
-          </div>
-
-          <div class="salary-details-sec-3">
-            <h2 class="salary-details-sec-3-heading">Fees List</h2>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-contact"
+          role="tabpanel"
+          aria-labelledby="pills-contact-tab"
+        >
+          <div class="teacher-salary-class-details">
+            <h3 class="heading-salary-deteails-1">Teacher Class Details</h3>
             <table>
               <thead>
                 <tr>
                   <th>Sr. No</th>
-                  <th>Pay Salary</th>
-                  <th>Salary Date</th>
-                  <th>Salary Entry Date</th>
+                  <th>Class</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th>Subject</th>
                 </tr>
               </thead>
-              <tbody class="teacher-salary-details-body-section">
-                <!-- Enter here dynamic data only  -->
+              <tbody class="teacher-class-details-body-section-next">
+                <!-- dynamic -->
               </tbody>
             </table>
           </div>
-
-        </div>
-
-      </div>
-      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-        <div class="teacher-salary-class-details">
-          <h3 class="heading-salary-deteails-1">Teacher Class Details</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Sr. No</th>
-                <th>Class</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-                <th>Subject</th>
-              </tr>
-            </thead>
-            <tbody class="teacher-class-details-body-section-next">
-              <!-- dynamic -->
-
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
-  </div>
 
+    <!-- Button trigger modal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Button trigger modal -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
-
-  <script src="../../login/main.js"></script>
-  <script src="../../assets/js/index.js"></script>
-  <script src="./03_teacherList.js"></script>
-</body>
-
+    <script src="../../login/main.js"></script>
+    <script src="../../assets/js/index.js"></script>
+    <script src="./03_teacherList.js"></script>
+  </body>
 </html>

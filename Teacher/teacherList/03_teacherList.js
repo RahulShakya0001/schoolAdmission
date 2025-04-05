@@ -30,8 +30,8 @@ db.teacher.forEach((v) => {
     htmls += '</td>';
     htmls += '<td>';
     htmls += '<a style="color: black;" href="../03_addTeacher.html?id=' + v.id + '" class="teacher-list-edit-button" teacherEditId="' + v.id + '">Edit</a>';
-    htmls += '<button class="teacher-list-delete-button" classIdDel="' + v.id + '">Delete</button>';
-    htmls += '<button class="teacher-list-manage-details-button" classIdDetail="' + v.id + '">Manage Details</button>';
+    htmls += '<button class="btn btn-danger teacher-list-delete-button" classIdDel="' + v.id + '">Delete</button>';
+    htmls += '<button class="btn btn-primary teacher-list-manage-details-button" classIdDetail="' + v.id + '">Manage Details</button>';
     htmls += '</td>';
     htmls += '</tr>';
 
@@ -57,16 +57,6 @@ $(".back-button").click((v) => {
     $(".manage-teacher-detail").css("display", "none");
 })
 
-// Teacher List mange details button
-// function edit_data(key, ary) {
-// db[key] = ary
-//     let db_str = JSON.stringify(db);
-//     localStorage.setItem('Database', db_str)
-// }
-
-// edit_data("salary", [])
-
-
 $(".teacher-list-manage-details-button").click(function (v) {
     v.preventDefault()
     $(".hide-main-class").css("display", "none");
@@ -83,7 +73,7 @@ $(".teacher-list-manage-details-button").click(function (v) {
     $(".teacher-phone-no").text("Phone No : " + teacher_data.phoneNumber);
     $(".teacher-gender").text("Gender : " + teacher_data.gender_select);
     let get_joining_time = teacher_data.joiningDate;
-    var get_time = "2024-08-04";
+    // var get_time = "2025-01-04";
     function monthDiff(d1, d2) {
         var months;
         months = (d2.getFullYear() - d1.getFullYear()) * 12;
@@ -91,7 +81,7 @@ $(".teacher-list-manage-details-button").click(function (v) {
         months += d2.getMonth();
         return months <= 0 ? 0 : months;
     }
-    var total_month = monthDiff(new Date(get_time), new Date());
+    var total_month = monthDiff(new Date(get_joining_time), new Date());
     $('.total-salary-heading').text("Total Salary: " + total_month * teacher_data.salary + " Rs");
 
     // Pending Salary 
@@ -105,7 +95,6 @@ $(".teacher-list-manage-details-button").click(function (v) {
     // Student Fee List
     var html = ""
     old_salary.forEach((v, i) => {
-        // console.log(v);
         html += '<tr>'
         html += '<td>' + v.id + '</td>'
         html += '<td>' + v.payment + '</td>'
@@ -116,7 +105,7 @@ $(".teacher-list-manage-details-button").click(function (v) {
 
     $(".teacher-salary-details-body-section").html(html);
 
-    // 
+
     var tclass = teacher_data.select_mul_class.map((v1) => v1 * 1);
     console.log(tclass);
     var html = '';
@@ -190,13 +179,4 @@ $(".teacher-list-manage-details-button").click(function (v) {
 
     });
 
-
-    // Teaher Class Details
-
-    // $('.Teacher-class-details').click(function (e) {
-    //     e.preventDefault();
-    //     let classIdDetail = $(".hidden-teacher-id").val();
-
-
-    // });
 });

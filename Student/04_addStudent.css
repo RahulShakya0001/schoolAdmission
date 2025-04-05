@@ -63,7 +63,9 @@ select{
 input{
     border-radius: 6px !important;
 }
-
+select:focus{
+  box-shadow: 0 0 10px rgb(59, 154, 255);
+}
 .gender-border select {
   border: 1px solid black;
   height: 2.7rem;
@@ -96,7 +98,7 @@ select {
   height: 2px;
   background-color: var(--addStudent-heading-underline-color);
 }
-
+.edit-previous-data,
 .addStudent-submit-button {
   width: 15rem;
   height: 3rem;
@@ -148,14 +150,6 @@ li {
 }
 
 .edit-previous-data {
-  width: 15rem;
-  background-color: #71dccf;
-  margin-left: 32rem;
-  margin-top: 2rem;
-  color: rgb(0, 0, 0);
-  font-size: 22px;
-  font-weight: 500;
-  border-radius: 5px;
   outline: none;
   border: none;
   display: none;

@@ -66,6 +66,12 @@ input {
   border-radius: 5px;
 }
 
+input:focus{
+  box-shadow: 0 0 10px rgb(59, 154, 255);
+}
+select:focus{
+  box-shadow: 0 0 10px rgb(59, 154, 255);
+}
 .add-subject {
   text-align: center;
 }
@@ -108,7 +114,7 @@ button {
 .deleteSubjectBtn:hover,
 .teacher-submit-button:hover,
 .edit-privious-data:hover {
-  background-color: var(--button-hover-bg-color);
+  background-color: #323232;
 }
 
 .delete_button {
