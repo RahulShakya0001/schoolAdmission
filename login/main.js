@@ -68,7 +68,16 @@ const login_dash = () => {
     let login_per = localStorage.getItem("Login");
     if (login_per) {
         login_per = JSON.parse(login_per);
-        $('.name_login').text(login_per.sname);
+        if(login.user_role == 1){
+            $('.name_login').text(login_per.sname);
+        }else if(login.user_role == 2){
+            $('.name_login').text(login_per.sname);   
+        }else if(login.user_role == 3){
+            $('.name_login').text(login_per.name);
+        }else{
+            alert("Wrong Permissions")
+        }
+        
         $('.username_login').text(login_per.username);
     } else {
         console.warn("No login data found in localStorage.");
@@ -83,11 +92,7 @@ const setupStudentDashboard = () => {
     let userData = getUserData("users", login?.relation_id, "student");
     if (!userData) return console.error("User data not found!");
 
-    let classData = getDataById("admin", studentData.class);
-    if (!classData) return console.error("Class data not found!");
-
     $(".student_name").text("Name : " + userData.name);
-    $(".student_class").text("Class : " + classData.class);
     $(".student_father").text("Father Name : " + studentData.fatherName);
     $(".student_phone_number").text("Phone No : " + studentData.phoneNumber);
     $(".student_address").text("Address : " + studentData.address);

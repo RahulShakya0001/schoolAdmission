@@ -1,12 +1,13 @@
-var login = localStorage.getItem("Login");
-login = JSON.parse(login);
+// var login = localStorage.getItem("Login");
+// login = JSON.parse(login);
+
 if (login.user_role == 2) {
     $(".attendance_sec").css("display", "flex");
     $(".attendance_list").css("display", "none");
     let teacher_data = db.teacher;
     let teacher_obj = teacher_data.find((v) => v.id == login.relation_id);
     let classes = db.class.find((v) => v.id == teacher_obj.select_mul_class);
-    $(".incharge-class").html('<span>Class: ' + classes.class + '</span><span style="margin-left: 1rem;">Name: ' + teacher_obj.name + '</span>');
+    $(".incharge-class").html('<span>' + classes.class + '</span><span style="margin-left: 1rem;">Name: ' + teacher_obj.name + '</span>');
     $(".filter-btn button").click((e) => {
         e.preventDefault();
         let attendance_date = $(".attendance-date input").val();
@@ -18,14 +19,12 @@ if (login.user_role == 2) {
             }
             return accum;
         }, []);
-        console.log(old_student_id_array);
         if (attendance_date) {
             let attendance_list = db.student.filter((v) => v.class * 1 == classes.id * 1);
             let html = "";
 
             attendance_list.forEach((v) => {
                 let status = old_student_id_array.includes(v.id) ? 1 : 0;
-
                 html += "<tr>";
                 html += "    <td>" + v.id + "</td>";
                 html += "    <td>" + v.name + "</td>";

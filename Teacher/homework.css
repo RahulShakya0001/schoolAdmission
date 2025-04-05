@@ -1,13 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 
 .box3-body {
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex; */
+    /* justify-conten/t: space-evenly; */
+
 }
 
+.box_in{
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+}
 form{
     width: 100%;
 }
@@ -68,5 +71,5 @@ form{
 }
 
 .submit-button-homework:hover{
-    background-color: rgb(107, 31, 31);
+    background-color: #323232;
 }

@@ -1,9 +1,10 @@
-$(".front-preview").css("display", "flex");
-$(".class-schedule").css("display", "none");
+// $(".class-schedule").css("display", "none");
+$(".class-schedule").css("display", "block");
+
 $('.class_details_page').css("display", "none");
 $('.dashboard').click((v) => {
     $(".front-preview").css("display", "flex");
-    $(".class-schedule").css("display", "none");
+    // $(".class-schedule").css("display", "none");
     $('.class_details_page').css("display", "none");
 
 });

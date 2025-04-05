@@ -1,166 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../dashboard/02_dashboard.css">
-    <link rel="stylesheet" href="./attendance.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./attendance.css" />
+    <link rel="stylesheet" href="../dashboard/02_dashboard.css" />
     <title>Attendance Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main attendance_sec">
-        <div class="box1">
-            <div class="box1-logo">
-                <img src="../assets/img/student_portal.jpeg" alt="sdflsd">
-            </div>
-            <div class="left-box-inner">
-                <div class="dashboard text-box">
-                    <a href="/dashboard/02_dashboard.html">Dashboard</a>
-                </div>
-                <div class="student text-box">
-                    <a href="/Student/04_addStudent.html">Student</a>
-                </div>
-                <div class="attendance text-box">
-                    <a href="./attendance.html">Attendance</a>
-                </div>
-                <div class="homework text-box">
-                    <a href="#">Homework</a>
-                </div>
-                <div class="text-box">
-                    <a class="log-out" href="/index.html">Log-out</a>
-                </div>
-            </div>
+      <div class="box1">
+        <div class="box1-logo">
+          <img src="../assets/img/student_portal.jpeg" alt="No image" />
         </div>
-        <div class="right-box">
-            <div class="box2"></div>
-            <div class="box3">
-                <h2 class="student-attendance">Student Attendance</h2>
-                <hr>
-                <h3 style="text-align: center; margin-bottom: 2rem;">Attendance Date</h3>
-                <div class="student-attendance-para-1 ">
-                    <div class="incharge-class ">
-                        <span>Class: </span>
-                    </div>
-                    <div class="attendance-date box-2px">
-                        <input type="date">
-                    </div>
-                    <div class="btn filter-btn">
-                        <button>Fiter Now</button>
-                    </div>
-                </div>
-
-                <div class="class-student-list">
-                    <h2 style="text-align: center; margin: 2rem 0 1rem 0;">Student Student List</h2>
-                    <form name="subject_forms">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Student Name</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="class-student-list-table">
-
-                            </tbody>
-                        </table>
-                        <div class="submit-student-attendance btn " style="width: 100%; text-align: center;">
-                            <button type="submit" class="submit-student-attendance-2nd">Submit</button>
-                        </div>
-                    </form>
-                </div>
+        <div class="left-box-inner"></div>
+      </div>
+      <div class="right-box">
+        <div class="box2"></div>
+        <div class="box3">
+          <div class="box_in">
+            <h2 class="student-attendance">Student Attendance</h2>
+            <hr />
+            <h3 style="text-align: center; margin-bottom: 2rem">
+              Attendance Date
+            </h3>
+            <div class="student-attendance-para-1">
+              <div class="incharge-class">
+                <span>Class: </span>
+              </div>
+              <div class="attendance-date box-2px">
+                <input type="date" />
+              </div>
+              <div class="btn filter-btn">
+                <button>Fiter Now</button>
+              </div>
             </div>
+
+            <div class="class-student-list">
+              <h2 style="text-align: center; margin: 2rem 0 1rem 0">
+                Student Student List
+              </h2>
+              <form name="subject_forms">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Student Name</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody class="class-student-list-table"></tbody>
+                </table>
+                <div
+                  class="submit-student-attendance btn"
+                  style="width: 100%; text-align: center"
+                >
+                  <button type="submit" class="submit-student-attendance-2nd">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <!-- Show list attendance -->
-    <div class="main attendance_list">
-        <div class="box1">
-            <div class="box1-logo">
-                <img src="../assets/img/student_portal.png" alt="sdflsd">
-            </div>
-            <div class="left-box-inner">
-                <div class="dashboard text-box">
-                    <a href="../dashboard/02_dashboard.html">Dashboard</a>
-                </div>
-                <div class="teacher text-box">
-                    <a href="./03_addTeacher.html">Teacher</a>
-                </div>
-                <div class="student text-box">
-                    <a href="../Student/04_addStudent.html">Student</a>
-                </div>
-                <div class="add-class text-box">
-                    <a href="../Class/05_addClass.html">Add Class</a>
-                </div>
-                <div class="add-subject text-box">
-                    <a href="../Subject/06_addSubject.html">Add Subject</a>
-                </div>
-                <div class="attendance-checker text-box">
-                    <a href="/Teacher/attendance.html">Attendance</a>
-                </div>
-                <div class="log-out text-box">
-                    <a href="../index.html">Log-out</a>
-                </div>
-            </div>
-        </div>
-        <div class="right-box">
-            <div class="box2"></div>
-            <div class="box3">
-                <h2 class="student-attendance">Student Attendance</h2>
-                <hr>
-                <h3 style="text-align: center; margin-bottom: 2rem;">Attendance Date</h3>
-                <div class="student-attendance-para-1 ">
-                    <div class="incharge-class ">
-                        <label style="display: block;">Select Class</label>
-                        <select class="js-example-basic-multiple input-7-input box-2px" name="class_name"  required>
-                            <option selected disabled>Select</option>
-                        </select>
-                    </div>
-                    <div class="attendance-date box-2px">
-                        <input class="attendance-date-for-list" type="date">
-                    </div>
-                    <div class="btn filter-btn-2nd">
-                        <button>Fiter Now</button>
-                    </div>
-                </div>
-
-                <div class="class-student-list">
-                    <h2 style="text-align: center; margin: 2rem 0 1rem 0;">Student Student List</h2>
-                    <form name="subject_forms">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Student Name</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="class-student-list-tables">
-
-                            </tbody>
-                        </table>
-                        <!-- <div class="submit-student-attendance btn " style="width: 100%; text-align: center;">
-                            <button type="submit" class="submit-student-attendance-2nd">Submit</button>
-                        </div> -->
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-   
-    <script src="/assets/js/index.js"></script>
-    <script src="../login/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="./attendance.js"></script>
-
-</body>
-
+    <script src="../assets/js/index.js"></script>
+    <script src="../login/main.js"></script>
+  </body>
 </html>
