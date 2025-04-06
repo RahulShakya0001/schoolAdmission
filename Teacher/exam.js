@@ -1,31 +1,38 @@
+
 let class_data = db.class;
+
 let classOptions = class_data.map(element =>
-    `<option value="${element.class}">${element.class}</option>`
+    `<option value="${element.id}">${element.class}</option>`
 ).join('');
 $(".first-input select").append(classOptions);
+console.log(classOptions);
 $(".first-input select").on("change", function () {
     let selectedClass = $(this).val();
-    // console.log("Selected Class:", selectedClass);
-    $(".second-input select").empty().append('<option selected disabled>Select</option>');
-    let selectedClassData = class_data.find(element => element.class === selectedClass);
-    if (selectedClassData) {
+    let $subjectDropdown = $("#subject-select-input");
+    console.log(typeof(selectedClass));
+    $subjectDropdown.empty().append('<option selected disabled>Select</option>');
+
+    let selectedClassData = class_data.find(element => element.id === Number(selectedClass));
+    if (selectedClassData && Array.isArray(selectedClassData.subject)) {
         let subjectOptions = selectedClassData.subject.map(e => {
             let subject = db.subject.find(x => x.id === Number(e.subject_class));
             return subject ? `<option value="${subject.id}">${subject.subject}</option>` : '';
         }).join('');
-        $(".second-input select").append(subjectOptions);
+        $subjectDropdown.append(subjectOptions);
     }
 });
+
+
 // empty_db_table("exam")
 let classOption = class_data.map(element =>
-    `<option value="${element.class}">${element.class}</option>`
+    `<option value="${element.id}">${element.class}</option>`
 ).join('');
 $(".first-input-2 select").append(classOption);
 $(".first-input-2 select").on("change", function () {
     let selectedClass = $(this).val();
     // console.log("Selected Class:", selectedClass);
     $(".second-input-2 select").empty().append('<option selected disabled>Select</option>');
-    let selectedClassData = class_data.find(element => element.class === selectedClass);
+    let selectedClassData = class_data.find(element => element.id === Number(selectedClass));
     if (selectedClassData) {
         let subjectOptions = selectedClassData.subject.map(e => {
             let subject = db.subject.find(x => x.id === Number(e.subject_class));
@@ -36,30 +43,37 @@ $(".first-input-2 select").on("change", function () {
 });
 
 // Show List Of Exam Data 
-
 $(".submit-answer").click((e) => {
     e.preventDefault();
-    let selectedClass = $(".first-input select").val();
-    let selectedSubject = $(".second-input select").val();
-    let questionText = $(".question textarea").val();
-    let options = [
-        $(".option-no-one input").val(),
-        $(".option-no-two input").val(),
-        $(".option-no-three input").val(),
-        $(".option-no-four input").val()
+
+    const selectedClass = $(".first-input select").val();
+    const selectedSubject = $(".second-input select").val();
+    const questionText = $(".question textarea").val().trim();
+    const options = [
+        $(".option-no-one input").val().trim(),
+        $(".option-no-two input").val().trim(),
+        $(".option-no-three input").val().trim(),
+        $(".option-no-four input").val().trim()
     ];
-    let answer = $(".answer-or-submit-button select").val();
-    // console.log(answer);
+    const answer = $(".answer-or-submit-button select").val();
+
+    // Validate fields
     if (!selectedClass || !selectedSubject || !questionText || options.includes("") || !answer) {
         alert("Please fill out all fields.");
         return;
     }
 
-    let nextId = db.exam.length > 0 ? Math.max(...db.exam.map(e => e.id)) + 1 : 1;
-    let existingExam = db.exam.find((v) => v.class == selectedClass && v.subject == selectedSubject);
+    // Prepare new question and exam entry
+    const nextExamId = db.exam.length > 0 ? Math.max(...db.exam.map(e => e.id)) + 1 : 1;
+    let existingExam = db.exam.find(v => v.class === selectedClass && v.subject === selectedSubject);
 
-    let questionId = existingExam && existingExam.question_data.length > 0 ? Math.max(...existingExam.question_data.map(q => q.id)) + 1 : 1;
-    let questionObj = {
+    const questionId = (existingExam && Array.isArray(existingExam.question_data) && existingExam.question_data.length > 0)
+        ? Math.max(...existingExam.question_data.map(q => q.id)) + 1
+        : 1;
+    console.log("NextExam Id ", nextExamId);
+    console.log("question Id : ", questionId);
+
+    const questionObj = {
         id: questionId,
         question: questionText,
         A: options[0],
@@ -67,14 +81,13 @@ $(".submit-answer").click((e) => {
         C: options[2],
         D: options[3],
         answer: answer
-
     };
-    // If the exam exists , add the new question to it
+
     if (existingExam) {
         existingExam.question_data.push(questionObj);
     } else {
-        let newExam = {
-            id: nextId,
+        const newExam = {
+            id: nextExamId,
             class: selectedClass,
             subject: selectedSubject,
             question_data: [questionObj],
@@ -82,9 +95,11 @@ $(".submit-answer").click((e) => {
         };
         db.exam.push(newExam);
     }
+
     saveToLocalStorage("Database", db);
-    window.location.reload()
     alert("Exam question added successfully!");
+    window.location.reload(); 
+
     $(".first-input select").val('');
     $(".second-input select").empty().append('<option selected disabled>Select</option>');
     $(".question textarea").val('');
@@ -94,34 +109,56 @@ $(".submit-answer").click((e) => {
 
 
 $(".fiter-button").click((v) => {
-    v.preventDefault()
+    v.preventDefault();
+
     let selectedClass = $(".first-input-2 .fiter-class").val();
     let selectedSubject = $(".second-input-2 .fiter-subject").val();
-    // console.log(db.exam);
-    let existingExam = db.exam.find((vv) => vv.class == selectedClass && vv.subject == selectedSubject);
+
+    let existingExam = db.exam.find((vv) =>
+        Number(vv.class) === Number(selectedClass) && Number(vv.subject) === Number(selectedSubject)
+    );
+    console.log(existingExam);
+    let s_class = db.class.find((e) => e.id == Number(existingExam.class));
+    let s_subject = db.subject.find((e) => e.id == Number(existingExam.subject));
+
     if (!existingExam) {
         alert("No exam found for the selected class and subject.");
         return;
     }
-    let htmls = "";
-    existingExam.question_data.forEach(function (e) {
-        htmls += '<tr>';
-        htmls += `<td >${existingExam.id}</td>`
-        htmls += '<td>' + existingExam.class + '</td>'
-        htmls += '<td>' + existingExam.subject + '</td>'
-        htmls += '<td>' + e.id + '</td>'
-        htmls += '<td>' + e.question + '</td>'
-        htmls += '<td>' + e.A + '</td>'
-        htmls += '<td>' + e.B + '</td>'
-        htmls += '<td>' + e.C + '</td>'
-        htmls += '<td>' + e.D + '</td>'
-        htmls += '<td>' + e.answer + '</td>'
-        htmls += `<td><button class="btn btn-danger btn-sets edit-exam-button" style="margin-right: 1rem;" subjectEditId="${e.id}" existingId="${existingExam.id}" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>`;
-        htmls += `<button class="btn btn-primary delete-exam-button" subjectDeleteId="${e.id}">Delete</button></td>`;
-        htmls += '</tr>'
-    })
-    $(".exam-table-data").html(htmls);
 
+    let htmls = existingExam.question_data.map((e) => {
+        return `
+            <tr>
+                <td>${existingExam.id}</td>
+                <td>${s_class.class}</td>
+                <td>${s_subject.subject}</td>
+                <td>${e.id}</td>
+                <td>${e.question}</td>
+                <td>${e.A}</td>
+                <td>${e.B}</td>
+                <td>${e.C}</td>
+                <td>${e.D}</td>
+                <td>${e.answer}</td>
+                <td>
+                    <button class="btn btn-danger btn-sets edit-exam-button"
+                            style="margin-right: 1rem;"
+                            subjectEditId="${e.id}"
+                            existingId="${existingExam.id}"
+                            data-toggle="modal"
+                            data-target="#exampleModalCenter">
+                        Edit
+                    </button>
+                    <button class="btn btn-primary delete-exam-button"
+                            subjectDeleteId="${e.id}">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        `;
+    }).join('');
+
+    $(".exam-table-data").html(htmls);
+    
     // Delete Exam
     $(".delete-exam-button").click(function (element) {
         element.preventDefault();
@@ -129,7 +166,6 @@ $(".fiter-button").click((v) => {
         let data_of_exam = db.exam.find((v) => v.class == selectedClass && v.subject === selectedSubject);
         let delete_qus_index = data_of_exam.question_data.findIndex((v) => v.id == subjectDeleteId);
         if(subjectDeleteId != -1){
-            // data_of_exam.question_data.splice(subjectDeleteId, 1);
             data_of_exam.question_data.splice(delete_qus_index, 1);
             saveToLocalStorage("Database", db);
             alert("Data is successfully deleted.");

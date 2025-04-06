@@ -81,7 +81,7 @@ $(".manage-details").click(function (e) {
         //  $(".info-page-design").css("display", "block");
         // $(".class_details_page").css("display", "none");
         // $(".class-schedule").css("display", "none");
-        // $(".identity-card-design-here").css("display", "none");
+        // $(".identity-card-design-here").css("display", "none");  
 
         var addStudentId = $(this).attr("addStudentIds");
         let student_data = db.student.find((v, i) => v.id == addStudentId);
@@ -259,8 +259,7 @@ $(".manage-details").click(function (e) {
 
         function printDiv() {
 
-            var divToPrint = document.querySelector(".container-print");
-            console.log(divToPrint);
+            var divToPrint = document.querySelector(".print_maer");
             var newWin = window.open('', 'Print-Window');
 
             newWin.document.open();
