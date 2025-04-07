@@ -18,8 +18,6 @@ let exam_data = db.exam.reduce((a, c) => {
 
 console.log(exam_data);
 
-
-
 let val = db.exam_result.reduce((aa, c, n) => {
     aa.push(c.question_data)
     return aa
