@@ -69,7 +69,7 @@ $(".click-button").click(function (e) {
 
 let isCollapsed = false;
 
-document.querySelector(".box1-logo").addEventListener("click", function () {
+document?.querySelector(".box1-logo")?.addEventListener("click", function () {
     let sidebar = document.querySelector(".box1");
     let logoImg = document.querySelector(".box1-logo img");
     isCollapsed = !isCollapsed;

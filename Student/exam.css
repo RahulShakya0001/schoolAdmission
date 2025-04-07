@@ -1,10 +1,10 @@
 table {
-    width: 100%;
+    width: 95%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px auto;
     font-family: 'Poppins', sans-serif;
-    background-color: #bebebe;
-    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
 }
 
 th,
@@ -15,12 +15,14 @@ td {
 }
 
 thead {
-    background-color: #6f6f6f;
+    background-color: #000000;
+    color: #ffffff; 
 }
 
 tbody tr:hover {
-    background-color: #9b9b9b;
+    background-color: #f0f0f0;
 }
+
 
 .show-result{
     width: 100%;

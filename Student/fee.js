@@ -1,8 +1,4 @@
-$(".fees-details").click((e) => {
-    e.preventDefault();
-    $(".front-preview").css("display", "none");
-    $(".class-schedule").css("display", "none");
-    $('.class_details_page').css("display", "block");
+
     let student_info = db.student.find((v) => v.id == login.relation_id);
     console.log(student_info);
     let class_info = db.class.find((v, i) => v.id == student_info.class);
@@ -67,5 +63,5 @@ $(".fees-details").click((e) => {
     });
     $(".data-table-tbody").html(htmls);
 
-});
+// });
 
