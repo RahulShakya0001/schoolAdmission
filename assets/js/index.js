@@ -1,9 +1,14 @@
+
 const getDatabase = () => {
     let db = localStorage.getItem("Database");
     return db ? JSON.parse(db) : null;
 }
 
 const setDatabase = (db) => {
+    window.onload = function () {
+        alert("👋 Welcome to the College Management System!\n\nIf you're new here, please use the default admin login to get started:\n\nUsername: admin\nPassword: 123\n\nThis will give you access to manage students, teachers, classes, and more. ✅");
+    };
+
     localStorage.setItem("Database", JSON.stringify(db));
 };
 
@@ -65,7 +70,6 @@ $(".click-button").click(function (e) {
         alert("Invalid username or password.");
     }
 });
-
 
 let isCollapsed = false;
 
