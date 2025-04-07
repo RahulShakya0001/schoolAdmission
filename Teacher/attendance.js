@@ -1,6 +1,10 @@
 // var login = localStorage.getItem("Login");
 // login = JSON.parse(login);
-
+if(login.user_role == 1){
+  window.onload = function () {
+    alert("📌 Attendance Info:\n\nOnly teachers or the admin can mark student attendance.\n\n👉 First, make sure a teacher is added by the admin.\n👉 Then assign students to the teacher's class/subject.\n\n✅ Once done, teachers can log in and mark attendance for their assigned students.");
+  };
+}
 if (login.user_role == 2) {
     $(".attendance_sec").css("display", "flex");
     $(".attendance_list").css("display", "none");
