@@ -43,8 +43,6 @@ const setSidebar = (userRole) => {
             <div class="add-class text-box"><a href="/Class/05_addClass.html">Add Class</a></div>
             <div class="add-subject text-box"><a href="/Subject/06_addSubject.html">Add Subject</a></div>
             <div class="attendance-checker text-box"><a href="/Teacher/attendance.html">Attendance</a></div>
-            <div class="exam-main text-box"><a href="/Teacher/exam.html">Exam</a></div>
-            <div class="exam-main-assign text-box"><a href="/Teacher/exam_assign.html">Assign Exam</a></div>
         `;
     } else if (userRole === 2) { // Teacher
         htmless += `
@@ -57,7 +55,7 @@ const setSidebar = (userRole) => {
             <div class="schedule text-box"><a href="/Student/class_schedule.html">Schedule</a></div>
             <div class="fees-details text-box"><a href="/Student/fee.html">Fees Details</a></div>
             <div class="student_homework text-box"><a href="/Student/homework.html">Homework</a></div>
-            <div class="exam text-box"><a href="/Student/exam.html">Exam</a></div>
+            
         `;
     }
 

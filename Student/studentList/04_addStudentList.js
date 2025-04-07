@@ -25,7 +25,7 @@ db.student.forEach((student, i) => {
     html += '<td>';
     html += '<a style="color: black;" href="../04_addStudent.html?id=' + student.id + '"  class="addStudent-edit-button btn btn-primary" addStudentEditId="' + student.id + '">Edit</a>';
     html += '<button class="addStudent-delete-button btn btn-danger" addStudentDelId="' + student.id + '">Delete</button>';
-    html += '<button class="manage-details btn btn-success" style="margin-left: 1rem;" addStudentIds="' + studentClass.id + '">Manage Details</button>';
+    html += '<button class="manage-details btn btn-success" style="margin-left: 1rem;" addStudentIds="' + student.id + '">Manage Details</button>';
     html += '</td>';
     html += '</tr>';
 });
