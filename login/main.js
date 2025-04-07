@@ -5,7 +5,7 @@ const saveToLocalStorage = (key, value) => localStorage.setItem(key, JSON.string
 const removeFromLocalStorage = (key) => localStorage.removeItem(key);
 
 // Get logged-in user data
-let login = localStorage.getItem("Login");
+var login = localStorage.getItem("Login");
 login = JSON.parse(login);
 
 // Redirect based on login status
