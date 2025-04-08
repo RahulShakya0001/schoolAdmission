@@ -11,7 +11,7 @@ if (login.user_role == 2) {
     let teacher_data = db.teacher;
     let teacher_obj = teacher_data.find((v) => v.id == login.relation_id);
     let classes = db.class.find((v) => v.id == teacher_obj.select_mul_class);
-    $(".incharge-class").html('<span>' + classes.class + '</span><span style="margin-left: 1rem;">Name: ' + teacher_obj.name + '</span>');
+    $(".incharge-class").html('<span>' + classes + '</span><span style="margin-left: 1rem;">Name: ' + teacher_obj.name + '</span>');
     $(".filter-btn button").click((e) => {
         e.preventDefault();
         let attendance_date = $(".attendance-date input").val();
