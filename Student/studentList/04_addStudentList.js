@@ -78,10 +78,6 @@ $(".manage-details").click(function (e) {
 
     $(".info_page").click((v) => {
         e.preventDefault();
-        //  $(".info-page-design").css("display", "block");
-        // $(".class_details_page").css("display", "none");
-        // $(".class-schedule").css("display", "none");
-        // $(".identity-card-design-here").css("display", "none");  
 
         var addStudentId = $(this).attr("addStudentIds");
         let student_data = db.student.find((v, i) => v.id == addStudentId);
@@ -213,19 +209,11 @@ $(".manage-details").click(function (e) {
 
     $(".manage_sub_btn").click((v, i) => {
         v.preventDefault();
-        var addStudentId = $(this).attr("addStudentIds");
-        console.log(addStudentId);
-        let student_info = db.class.find((v) => v.id == addStudentId);
-        console.log(student_info);
+        let student_info = db.student.find((v) => v.id == addStudentId);
+        let student_classes = db.class.find((v) => v.id == Number(student_info.class))
         let htmls = "";
-        student_info.subject.forEach((vs, i) => {
+        student_classes.subject.forEach((vs, i) => {
             let teacher_name = db.teacher.find((v1, i) => v1.id == vs.teacher * 1);
-
-            // Subject find
-            // console.log(teacher_name);
-            console.log(vs);
-            
-            let teacher_n = student_info.subject.find(t => t.id)
             let subject_name = db.subject.find((v2, i) => v2.id == vs.id);
             htmls += "<tr>"
             htmls += "<td>" + vs.id + "</td>"
@@ -236,8 +224,6 @@ $(".manage-details").click(function (e) {
             htmls += "</tr>"
         });
         $(".class-teacher-list-of-class-schedule").html(htmls)
-
-
 
     });
 
