@@ -113,6 +113,7 @@ teacher.forEach((v, i) => {
 });
 
 $(".add-subject-list-2 select").html(teacher_options);
+
 $(".sub-details").click(function (e) {
     e.preventDefault();
     $(".box3").css("display", "none");
@@ -270,12 +271,6 @@ $(".class-incharge-of-add-subject").click((e) => {
 
     console.log(html);
     $(".incharge-row-section").html(html)
-    // console.log(teacher_data.id);
-    // console.log(teacher_data.class);
-    // console.log(teacher_data.registration_fees);
-    // console.log(teacher_data.admission_fees);
-    // console.log(teacher_data.exam_fees);
-    // console.log(teacher_data.subject);
 
     $(".incharge-submit").click((v) => {
         v.preventDefault()

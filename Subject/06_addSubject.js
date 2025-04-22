@@ -3,8 +3,7 @@ var a = db.subject;
 var sortVal = a.sort((a, b) => b.id - a.id)[0];
 var oj = sortVal != null ? sortVal.id : 0;
 let htmls = '';
-var sortedSubjects = db.subject.sort((a, b) => a.id - b.id);
-// console.log(sortedSubjects);
+var sortedSubjects = a.sort((a, b) => a.id - b.id);
 sortedSubjects.forEach((v, i) => {
     let v_subject = v.subject.charAt(0).toUpperCase() + v.subject.slice(1);
     htmls += `
